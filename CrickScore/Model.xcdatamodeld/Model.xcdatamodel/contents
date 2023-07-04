@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BatsmanDetails" representedClassName="BatsmanDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="ballCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fourCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="outStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="overCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="runCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sixCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeamDetails" inverseName="batsmanDetails" inverseEntity="TeamDetails"/>
+    </entity>
+    <entity name="BowlerDetails" representedClassName="BowlerDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="ballCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fourCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="overCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="runCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sixCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wicketCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeamDetails" inverseName="bowlerDetails" inverseEntity="TeamDetails"/>
+    </entity>
+    <entity name="PlayerDetails" representedClassName="PlayerDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="ballCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="fourCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isBatsman" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="overCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="runCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sixCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="teamName" optional="YES" attributeType="String"/>
+        <attribute name="wicketCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wicketStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeamDetails" inverseName="playerDetails" inverseEntity="TeamDetails"/>
+    </entity>
+    <entity name="TeamDetails" representedClassName="TeamDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="team_name" optional="YES" attributeType="String"/>
+        <relationship name="batsmanDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BatsmanDetails" inverseName="parent" inverseEntity="BatsmanDetails"/>
+        <relationship name="bowlerDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BowlerDetails" inverseName="parent" inverseEntity="BowlerDetails"/>
+        <relationship name="playerDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlayerDetails" inverseName="parent" inverseEntity="PlayerDetails"/>
+    </entity>
+</model>
