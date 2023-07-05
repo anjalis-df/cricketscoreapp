@@ -10,7 +10,6 @@ import CoreData
 
 class ScoreBoardViewController: UIViewController {
     
-    
     @IBOutlet var winningTeamName: UILabel!
     
     @IBOutlet var batsman1: UITextField!
@@ -67,6 +66,7 @@ class ScoreBoardViewController: UIViewController {
     var totalBallPlayByBatsman1: Int! = 0
     var totalBallPlayByBatsman2: Int! = 0
     var totalBallPlayByBowler: Int! = 0
+    var overOfBowler: Int! = 0
     var runOfBowler: Int! = 0
     var totalBall: Int! = 0
     var totalRun: Int! = 0
@@ -80,10 +80,8 @@ class ScoreBoardViewController: UIViewController {
     var totalWicketCount: Int! = 0
     var maidenCount: Int! = 0
     var runAccordingOver: Int! = 0
-  //  var playerDetials: [String: BatsmanDetails] = [:]
     var batsmanDetailArray = [PlayerDetails]()
     var bowlerDetailArray = [PlayerDetails]()
-    
     var winningTeamNameForThisVC : String?
     
    // let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -217,6 +215,7 @@ class ScoreBoardViewController: UIViewController {
             print("BatsMan2 Name: \(batsman2.text!)")
             batsman1.isUserInteractionEnabled = false
             batsman2.isUserInteractionEnabled = false
+            self.overOfBowler = 0
             return
         } else {
             self.displayAlertMessage(messageToDisplay: "\(batsman1.text!) and \(batsman2.text!) is not in your team.")
@@ -263,11 +262,13 @@ class ScoreBoardViewController: UIViewController {
                 self.maidenCount += 1
                 self.maidenOverCount.text = String(maidenCount)
             }
+            overOfBowler += 1
             runAccordingOver = 0
             totalOver += 1
             totalOverOfTeam1.text = String(totalOver)
         }
         totalRunOfTeam1.text = String(totalRun)
+        ballDeliveredbyBowler.text = String(overOfBowler)
         runAccordingOver = runAccordingOver + Int(score)!
         print("Total Ball: \(totalBall!)")
         print("Total Run: \(totalRun!)")
@@ -407,28 +408,48 @@ class ScoreBoardViewController: UIViewController {
         }
     }
     
-    func loadBatsman() {
-        let request: NSFetchRequest<PlayerDetails> = PlayerDetails.fetchRequest()
-        do {
-            batsmanDetailArray = try RegistrationViewController.context.fetch(request)
-            print("Item Array: ", batsmanDetailArray)
-        }catch {
-            print("Error fatching data from context \(error)")
-        }
-    }
+//    func loadBatsman() {
+//        let request: NSFetchRequest<PlayerDetails> = PlayerDetails.fetchRequest()
+//        do {
+//            batsmanDetailArray = try RegistrationViewController.context.fetch(request)
+//            print("Item Array: ", batsmanDetailArray)
+//        }catch {
+//            print("Error fatching data from context \(error)")
+//        }
+//    }
+//
+//    func loadBowler() {
+//        let requeset: NSFetchRequest<PlayerDetails> = PlayerDetails.fetchRequest()
+//        do {
+//            bowlerDetailArray = try RegistrationViewController.context.fetch(requeset)
+//            print("Bowler Array: ",bowlerDetailArray)
+//        }catch {
+//            print("Error fatching data from context \(error)")
+//        }
+//    }
     
-    func loadBowler() {
-        let requeset: NSFetchRequest<PlayerDetails> = PlayerDetails.fetchRequest()
-        do {
-            bowlerDetailArray = try RegistrationViewController.context.fetch(requeset)
-            print("Bowler Array: ",bowlerDetailArray)
-        }catch {
-            print("Error fatching data from context \(error)")
-        }
-    }
+//    func loadPlayerTemp(){
+//        let predicate = NSPredicate(format: "parent.emailId MATCHES %@", (MemberAddedFromViewController.currentMatchUserDetail?.emailId)!)
+//        
+//        let request: NSFetchRequest<PlayerDetails> = PlayerDetails.fetchRequest()
+//        
+//        request.predicate = predicate
+//        
+//        do {
+//            MemberAddedFromViewController.playerDetails = try RegistrationViewController.context.fetch(request)
+//        }catch{
+//            print("Got Error \(error)")
+//        }
+//    }
+    
     
     func loadPlayer() {
+        let predicate = NSPredicate(format: "parent.emailId MATCHES %@", (MemberAddedFromViewController.currentMatchUserDetail?.emailId)!)
+        
         let request: NSFetchRequest<PlayerDetails> = PlayerDetails.fetchRequest()
+        
+        request.predicate = predicate
+        
         do {
             MemberAddedFromViewController.playerDetails = try RegistrationViewController.context.fetch(request)
             print("Player Array: \(MemberAddedFromViewController.playerDetails)")
@@ -500,8 +521,7 @@ class ScoreBoardViewController: UIViewController {
         }
         
         print("Player Playing: \(currentPlayer)")
-        
-        let newItem = BatsmanDetails(context: RegistrationViewController.context)
+    
         if isBatsman1 {
             currentPlayer?.name = currentBatsman
             currentPlayer?.ballCount = Int16(self.ballbatsman1.text!) ?? 0

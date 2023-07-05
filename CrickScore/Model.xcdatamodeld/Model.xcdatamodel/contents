@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BatsmanDetails" representedClassName="BatsmanDetails" syncable="YES" codeGenerationType="class">
         <attribute name="ballCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="fourCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -34,17 +34,19 @@
         <attribute name="totalRunCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="wicketCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="wicketStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeamDetails" inverseName="playerDetails" inverseEntity="TeamDetails"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserRegistrationDetails" inverseName="playerDetails" inverseEntity="UserRegistrationDetails"/>
     </entity>
     <entity name="TeamDetails" representedClassName="TeamDetails" syncable="YES" codeGenerationType="class">
         <attribute name="team_name" optional="YES" attributeType="String"/>
         <relationship name="batsmanDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BatsmanDetails" inverseName="parent" inverseEntity="BatsmanDetails"/>
         <relationship name="bowlerDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BowlerDetails" inverseName="parent" inverseEntity="BowlerDetails"/>
-        <relationship name="playerDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlayerDetails" inverseName="parent" inverseEntity="PlayerDetails"/>
+        <relationship name="playerDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlayerDetails"/>
     </entity>
     <entity name="UserRegistrationDetails" representedClassName="UserRegistrationDetails" syncable="YES" codeGenerationType="class">
-        <attribute name="code" optional="YES" attributeType="String"/>
+        <attribute name="code" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="emailId" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
+        <relationship name="playerDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlayerDetails" inverseName="parent" inverseEntity="PlayerDetails"/>
     </entity>
 </model>

@@ -37,9 +37,37 @@ class TeamSelectionViewController: UIViewController {
         
       //  TeamSelectionViewController.context.delete(<#T##object: NSManagedObject##NSManagedObject#>)
         
+        let currentEmail = UserDefaults.standard.string(forKey: "LastLoggedEmail")
+        
+        for player in MemberAddedFromViewController.playerDetails {
+            if player.parent?.emailId == currentEmail {
+                player.ballCount = 0
+                player.fourCount = 0
+                player.sixCount = 0
+                player.runCount = 0
+                player.overCount = 0
+                player.wicketCount = 0
+                player.wicketStatus = false
+                player.totalRunCount = 0
+                player.totalBallCount = 0
+                player.maidenOverCount = 0
+                save()
+                print("Player Details: \(player)")
+            }
+        }
+        
+        
         let teamDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamDetails") as! TeamDetailViewController
         
         self.navigationController?.pushViewController(teamDetailsVC, animated: true)
+    }
+    
+    func save() {
+        do{
+            try RegistrationViewController.context.save()
+        }catch{
+            print("Error saveing context: ", error)
+        }
     }
     
     @IBAction func runningMatchClicked(_ sender: Any) {

@@ -59,7 +59,7 @@ class TeamDetailViewController: UIViewController {
             let addMemberVC = self.storyboard?.instantiateViewController(withIdentifier: "MemberAddedFrom") as! MemberAddedFromViewController
 //            addMemberVC.teamName = TeamDetailViewController.teamDetailArray[1]
             addMemberVC.isSecondTeamMember = true
-            
+            addMemberVC.teamName = self.teamName.text
             self.navigationController?.pushViewController(addMemberVC, animated: true)
         }else {
             UserDefaults.standard.set(teamName.text, forKey: "TeamA")
@@ -76,6 +76,7 @@ class TeamDetailViewController: UIViewController {
             let addMemberVC = self.storyboard?.instantiateViewController(withIdentifier: "MemberAddedFrom") as! MemberAddedFromViewController
 //            addMemberVC.teamName = TeamDetailViewController.teamDetailArray[0]
             addMemberVC.isSecondTeamMember = false
+            addMemberVC.teamName = self.teamName.text
             self.navigationController?.pushViewController(addMemberVC, animated: true)
         }
         

@@ -62,7 +62,7 @@ class MatchDetailsViewController: UIViewController {
     }
     
     @IBAction func battingSelected(_ sender: UIButton) {
-        if checkingValidation() == false{
+        if checkingaOverValidation() == false{
             return
         }
         let teamA = UserDefaults.standard.string(forKey: "TeamA")
@@ -104,7 +104,7 @@ class MatchDetailsViewController: UIViewController {
     }
     
     @IBAction func bowlingSelected(_ sender: UIButton) {
-        if checkingValidation() == false{
+        if checkingaOverValidation() == false{
             return
         }
         
@@ -162,7 +162,7 @@ class MatchDetailsViewController: UIViewController {
         self.navigationController?.pushViewController(scoreBoardVC!, animated: true)
     }
     
-    func checkingValidation()-> Bool{
+    func checkingaOverValidation()-> Bool{
         if totalOversTextField.text?.isEmpty == true {
             displayAlertMessage(messageToDisplay: "Please first enter total number of overs.")
             return false

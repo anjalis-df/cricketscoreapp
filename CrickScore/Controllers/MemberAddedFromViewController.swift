@@ -32,9 +32,11 @@ class MemberAddedFromViewController: UIViewController {
     @IBOutlet var mobileNumber9: UITextField!
     @IBOutlet var mobileNumber10: UITextField!
     
-    var teamName: TeamDetails? 
+    var teamName: String?
     var isSecondTeamMember: Bool?
 
+    static var currentMatchUserDetail: UserRegistrationDetails?
+    
 //    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 //    static var team1Array = [PlayerDetails]()
 //    static var team2Array = [PlayerDetails]()
@@ -46,7 +48,7 @@ class MemberAddedFromViewController: UIViewController {
         print("Team Name: \(self.teamName!)")
         self.navigationItem.hidesBackButton = true
         self.navigationController?.navigationBar.backgroundColor = .black
-        self.navigationItem.title = teamName?.team_name
+        self.navigationItem.title = teamName
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white
                               ]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
@@ -85,9 +87,9 @@ class MemberAddedFromViewController: UIViewController {
             "playerName10" : self.playerName10.text!
         ]
 
-        UserDefaults.standard.set(playerDetails, forKey: teamName!.team_name!)
-        print(UserDefaults.standard.object(forKey: teamName!.team_name!)!)
-        let playerDetails1 = UserDefaults.standard.object(forKey: teamName!.team_name!) as! [String: String]
+        UserDefaults.standard.set(playerDetails, forKey: teamName!)
+        print(UserDefaults.standard.object(forKey: teamName!)!)
+        let playerDetails1 = UserDefaults.standard.object(forKey: teamName!) as! [String: String]
         print("Stored Dict Values: \(playerDetails1)")
         print("One Player: \(playerDetails1["playerName1"] ?? "")")
         
@@ -98,7 +100,7 @@ class MemberAddedFromViewController: UIViewController {
             
             for playerName in playerDetails {
                 print("Name: \(playerName.value)")
-                let playerDetail = PlayerDetails(context: TeamSelectionViewController.context)
+                let playerDetail = PlayerDetails(context: RegistrationViewController.context)
                 playerDetail.name = playerName.value
                 playerDetail.ballCount = 0
                 playerDetail.fourCount = 0
@@ -112,11 +114,12 @@ class MemberAddedFromViewController: UIViewController {
                 playerDetail.totalRunCount = 0
                 playerDetail.totalBallCount = 0
                 playerDetail.maidenOverCount = 0
+                playerDetail.parent = MemberAddedFromViewController.currentMatchUserDetail
 //                playerDetail.parent = teamName
 //                MemberAddedFromViewController.team2Array.append(playerDetail)
                 MemberAddedFromViewController.playerDetails.append(playerDetail)
                 save()
-                print("Player Detail: \(playerDetail.parent?.team_name)")
+//                print("Player Detail: \((playerDetail.parent?.team_name)!)")
             }
 //            loadTeam2Details()
             self.navigationController?.pushViewController(MatchDetailsVC, animated: true)
@@ -127,9 +130,9 @@ class MemberAddedFromViewController: UIViewController {
             TeamDetailViewController.isSecondTeam = true
             for playerName in playerDetails {
                 print("Name: \(playerName.value)")
-                let team = teamName?.team_name
+                let team = teamName
                 print("Team Name: \(team ?? "Hello")")
-                let playerDetail = PlayerDetails(context: TeamSelectionViewController.context)
+                let playerDetail = PlayerDetails(context: RegistrationViewController.context)
                 playerDetail.name = playerName.value
                 playerDetail.ballCount = 0
                 playerDetail.fourCount = 0
@@ -143,11 +146,12 @@ class MemberAddedFromViewController: UIViewController {
                 playerDetail.totalRunCount = 0
                 playerDetail.totalBallCount = 0
                 playerDetail.maidenOverCount = 0
+                playerDetail.parent = MemberAddedFromViewController.currentMatchUserDetail
 //                playerDetail.parent = TeamDetailViewController.teamDetailArray[0]
 //                MemberAddedFromViewController.team1Array.append(playerDetail)
                 MemberAddedFromViewController.playerDetails.append(playerDetail)
                 save()
-                print("Player Detail: \(playerDetail.parent?.team_name)")
+          //      print("Player Detail: \(playerDetail.parent?.team_name)")
             }
 //            loadTeam1Details()
             self.navigationController?.popViewController(animated: true)
@@ -158,7 +162,7 @@ class MemberAddedFromViewController: UIViewController {
     
     func save() {
         do{
-            try TeamSelectionViewController.context.save()
+            try RegistrationViewController.context.save()
         }catch{
             print("Error saveing context: ", error)
         }
