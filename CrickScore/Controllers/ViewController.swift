@@ -23,32 +23,35 @@ class ViewController: UIViewController {
 
     @IBAction func clickedLoginButton(_ sender: Any) {
         
+        if userNameTextField.text?.isEmpty == true {
+            self.displayAlertMessage(messageToDisplay: "UserName can't be empty.")
+        }
+
+        if !self.isValidEmailAddress(givenEmailAddress: userNameTextField.text!) {
+            self.displayAlertMessage(messageToDisplay: "Email address is not valid.")
+        }
+
+        if passwordTextField.text?.isEmpty == true {
+            self.displayAlertMessage(messageToDisplay: "Password can't be empty.")
+        }
+
+        if !self.isValiePassword(str: passwordTextField.text!) {
+            self.displayAlertMessage(messageToDisplay: "Password is not secure. Please Enter secure password")
+        }
+        
         let teamVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamSelection")// as! TeamSelectionViewController
         self.navigationController?.pushViewController(teamVC!, animated: true)
-        
-//        if userNameTextField.text?.isEmpty == true {
-//            self.displayAlertMessage(messageToDisplay: "UserName can't be empty.")
-//        }
-//
-////        if userNameTextField.state.isEmpty {
-////            self.displayAlertMessage(messageToDisplay: "UserName can't be empty.")
-////        }
-//
-//        if !self.isValidEmailAddress(givenEmailAddress: userNameTextField.text!) {
-//            self.displayAlertMessage(messageToDisplay: "Email address is not valid.")
-//        }
-//
-//        if passwordTextField.text?.isEmpty == true {
-//            self.displayAlertMessage(messageToDisplay: "Password can't be empty.")
-//        }
-//
-//        if !self.isValiePassword(str: passwordTextField.text!) {
-//            self.displayAlertMessage(messageToDisplay: "Password is not secure. Please Enter secure password")
-//        }
 //
 //        loginAPICall()
 
     }
+    
+    @IBAction func createNewAccount(_ sender: Any) {
+        
+        let registrationVC = self.storyboard?.instantiateViewController(withIdentifier: "RegistrationVC")
+        self.navigationController?.pushViewController(registrationVC!, animated: true)
+    }
+    
     
     func loginAPICall(){
         

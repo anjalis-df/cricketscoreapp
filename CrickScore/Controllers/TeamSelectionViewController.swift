@@ -15,7 +15,7 @@ class TeamSelectionViewController: UIViewController {
     
     static var isRunningMatch = false
     
-    static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//    static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,7 +35,7 @@ class TeamSelectionViewController: UIViewController {
         
         TeamSelectionViewController.isRunningMatch = false
         
-        TeamSelectionViewController.context.delete(<#T##object: NSManagedObject##NSManagedObject#>)
+      //  TeamSelectionViewController.context.delete(<#T##object: NSManagedObject##NSManagedObject#>)
         
         let teamDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamDetails") as! TeamDetailViewController
         
@@ -45,6 +45,8 @@ class TeamSelectionViewController: UIViewController {
     @IBAction func runningMatchClicked(_ sender: Any) {
         
         TeamSelectionViewController.isRunningMatch = true
+        let scoreBoradVC = self.storyboard?.instantiateViewController(withIdentifier: "ScoreBoardViewController") as! ScoreBoardViewController
+        self.navigationController?.pushViewController(scoreBoradVC, animated: true)
         
     }
     

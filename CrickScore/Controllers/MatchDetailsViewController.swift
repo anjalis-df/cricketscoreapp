@@ -22,8 +22,8 @@ class MatchDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Array 1: \(MemberAddedFromViewController.team1Array)")
-        print("Array 2: \(MemberAddedFromViewController.team2Array)")
+//        print("Array 1: \(MemberAddedFromViewController.team1Array)")
+//        print("Array 2: \(MemberAddedFromViewController.team2Array)")
     }
 
     @IBAction func tossAction(_ sender: UIButton) {
@@ -37,25 +37,26 @@ class MatchDetailsViewController: UIViewController {
         print("Result: \(result)")
         self.isTossButtonClicked = true
         if result == 1 {
-            winningTeamLabel.text = TeamDetailViewController.teamDetailArray[0].team_name
+//            winningTeamLabel.text = TeamDetailViewController.teamDetailArray[0].team_name
             winningTeamLabel.text = UserDefaults.standard.string(forKey: "TeamA")
             winningTeamName = winningTeamLabel.text!
         }else {
-            winningTeamLabel.text = TeamDetailViewController.teamDetailArray[1].team_name
+//            winningTeamLabel.text = TeamDetailViewController.teamDetailArray[1].team_name
             winningTeamLabel.text = UserDefaults.standard.string(forKey: "TeamB")
             winningTeamName = winningTeamLabel.text!
         }
         
         UserDefaults.standard.set(winningTeamName, forKey: "WinningTeam")
         
+        self.tossButton.alpha = 0.5
         self.tossButton.isUserInteractionEnabled = false
         print("Winning Team: \(winningTeamName)")
         
         scoreBoardVC = self.storyboard?.instantiateViewController(withIdentifier: "ScoreBoardViewController") as! ScoreBoardViewController
         scoreBoardVC?.winningTeamNameForThisVC = winningTeamName
         
-        print("Team1 array Parent: \(TeamDetailViewController.teamDetailArray[0].team_name)")
-        print("Team2 array Parent: \(TeamDetailViewController.teamDetailArray[1].team_name)")
+//        print("Team1 array Parent: \(TeamDetailViewController.teamDetailArray[0].team_name)")
+//        print("Team2 array Parent: \(TeamDetailViewController.teamDetailArray[1].team_name)")
         
         
     }
@@ -74,25 +75,28 @@ class MatchDetailsViewController: UIViewController {
         if UserDefaults.standard.string(forKey: "TeamA") == winningTeamName {
             for player in MemberAddedFromViewController.playerDetails {
                 if teamA == player.teamName {
-                    scoreBoardVC?.batsmanDetailArray[i] = player
+                    scoreBoardVC?.batsmanDetailArray.append(player)
                     i += 1
+                    print("Index of Team A: \(i)")
                 }else {
-                    scoreBoardVC?.bowlerDetailArray[j] = player
+                    scoreBoardVC?.bowlerDetailArray.append(player)
                     j += 1
+                    print("Index of Team B: \(j)")
+                }
+            }
+        }else {
+            for player in MemberAddedFromViewController.playerDetails {
+                if teamA == player.teamName {
+                    scoreBoardVC?.bowlerDetailArray.append(player)
+                    i += 1
+                    print("Index of Team A: \(i)")
+                }else {
+                    scoreBoardVC?.batsmanDetailArray.append(player)
+                    j += 1
+                    print("Index of Team B: \(j)")
                 }
             }
         }
-        
-//        print("Team1 Array: \(MemberAddedFromViewController.team1Array)")
-//        print("Team2 Array: \(MemberAddedFromViewController.team2Array)")
-//
-//        if TeamDetailViewController.teamDetailArray[0].team_name == winningTeamName {
-//            scoreBoardVC?.batsmanDetailArray = MemberAddedFromViewController.team1Array
-//            scoreBoardVC?.bowlerDetailArray = MemberAddedFromViewController.team2Array
-//        }else {
-//            scoreBoardVC?.bowlerDetailArray = MemberAddedFromViewController.team1Array
-//            scoreBoardVC?.batsmanDetailArray = MemberAddedFromViewController.team2Array
-//        }
         
         print(scoreBoardVC?.winningTeamNameForThisVC)
         self.navigationController?.pushViewController(scoreBoardVC!, animated: true)
@@ -118,11 +122,25 @@ class MatchDetailsViewController: UIViewController {
         if UserDefaults.standard.string(forKey: "TeamA") == winningTeamName {
             for player in MemberAddedFromViewController.playerDetails {
                 if teamA == player.teamName {
-                    scoreBoardVC?.bowlerDetailArray[i] = player
+                    scoreBoardVC?.bowlerDetailArray.append(player)
                     i += 1
+                    print("Index of TeamA \(i)")
                 }else {
-                    scoreBoardVC?.batsmanDetailArray[j] = player
+                    scoreBoardVC?.batsmanDetailArray.append(player)
                     j += 1
+                    print("Index of TeamB \(j)")
+                }
+            }
+        }else {
+            for player in MemberAddedFromViewController.playerDetails {
+                if teamA == player.teamName {
+                    scoreBoardVC?.batsmanDetailArray.append(player)
+                    i += 1
+                    print("Index of TeamA \(i)")
+                }else {
+                    scoreBoardVC?.bowlerDetailArray.append(player)
+                    j += 1
+                    print("Index of TeamB \(j)")
                 }
             }
         }
