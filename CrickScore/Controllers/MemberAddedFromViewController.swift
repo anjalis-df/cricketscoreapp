@@ -37,11 +37,8 @@ class MemberAddedFromViewController: UIViewController {
 
     static var currentMatchUserDetail: UserRegistrationDetails?
     
-//    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//    static var team1Array = [PlayerDetails]()
-//    static var team2Array = [PlayerDetails]()
-    
     static var playerDetails = [PlayerDetails]()
+    static var tempPlayerDetails = [PlayerDetails]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,65 +92,58 @@ class MemberAddedFromViewController: UIViewController {
         
         if isSecondTeamMember == true {
             let MatchDetailsVC = (self.storyboard?.instantiateViewController(withIdentifier: "MatchDetailsID"))! as! MatchDetailsViewController
-            var team = UserDefaults.standard.string(forKey: "TeamB")
-            print("Team: \(team)")
+            let team = UserDefaults.standard.string(forKey: "TeamB")
+            print("Team: \(team!)")
             
             for playerName in playerDetails {
                 print("Name: \(playerName.value)")
                 let playerDetail = PlayerDetails(context: RegistrationViewController.context)
-                playerDetail.name = playerName.value
-                playerDetail.ballCount = 0
-                playerDetail.fourCount = 0
-                playerDetail.sixCount = 0
-                playerDetail.runCount = 0
-                playerDetail.overCount = 0
-                playerDetail.wicketCount = 0
+                playerDetail.playerName = playerName.value
+                playerDetail.playerBallCount = 0
+                playerDetail.playerFourCount = 0
+                playerDetail.playerSixCount = 0
+                playerDetail.playerRunCount = 0
+                playerDetail.playerOverCount = 0
+                playerDetail.playerWicketCount = 0
                 playerDetail.wicketStatus = false
                 playerDetail.isBatsman = false
                 playerDetail.teamName = team
                 playerDetail.totalRunCount = 0
                 playerDetail.totalBallCount = 0
-                playerDetail.maidenOverCount = 0
+                playerDetail.playerMaidenOverCount = 0
                 playerDetail.parent = MemberAddedFromViewController.currentMatchUserDetail
-//                playerDetail.parent = teamName
-//                MemberAddedFromViewController.team2Array.append(playerDetail)
                 MemberAddedFromViewController.playerDetails.append(playerDetail)
                 save()
-//                print("Player Detail: \((playerDetail.parent?.team_name)!)")
             }
-//            loadTeam2Details()
+            loadTempData()
             self.navigationController?.pushViewController(MatchDetailsVC, animated: true)
         }else {
-            let teamDetailVC = (self.storyboard?.instantiateViewController(identifier: "TeamDetails"))! as TeamDetailViewController
-            var team = UserDefaults.standard.string(forKey: "TeamA")
-            print("Team: \(team)")
+            let team = UserDefaults.standard.string(forKey: "TeamA")
+            print("Team: \(team!)")
             TeamDetailViewController.isSecondTeam = true
             for playerName in playerDetails {
                 print("Name: \(playerName.value)")
                 let team = teamName
                 print("Team Name: \(team ?? "Hello")")
                 let playerDetail = PlayerDetails(context: RegistrationViewController.context)
-                playerDetail.name = playerName.value
-                playerDetail.ballCount = 0
-                playerDetail.fourCount = 0
-                playerDetail.sixCount = 0
-                playerDetail.runCount = 0
-                playerDetail.overCount = 0
-                playerDetail.wicketCount = 0
+                playerDetail.playerName = playerName.value
+                playerDetail.playerBallCount = 0
+                playerDetail.playerFourCount = 0
+                playerDetail.playerSixCount = 0
+                playerDetail.playerRunCount = 0
+                playerDetail.playerOverCount = 0
+                playerDetail.playerWicketCount = 0
                 playerDetail.wicketStatus = false
                 playerDetail.isBatsman = false
                 playerDetail.teamName = team
                 playerDetail.totalRunCount = 0
                 playerDetail.totalBallCount = 0
-                playerDetail.maidenOverCount = 0
+                playerDetail.totalOverCount = 0
+                playerDetail.playerMaidenOverCount = 0
                 playerDetail.parent = MemberAddedFromViewController.currentMatchUserDetail
-//                playerDetail.parent = TeamDetailViewController.teamDetailArray[0]
-//                MemberAddedFromViewController.team1Array.append(playerDetail)
                 MemberAddedFromViewController.playerDetails.append(playerDetail)
                 save()
-          //      print("Player Detail: \(playerDetail.parent?.team_name)")
             }
-//            loadTeam1Details()
             self.navigationController?.popViewController(animated: true)
            
         }
@@ -168,26 +158,19 @@ class MemberAddedFromViewController: UIViewController {
         }
     }
     
-//    func loadTeam1Details() {
-//        let request: NSFetchRequest<PlayerDetails> = PlayerDetails.fetchRequest()
-//
-//        do {
-//            MemberAddedFromViewController.team1Array = try TeamSelectionViewController.context.fetch(request)
-//            print("Batsman Details: ", MemberAddedFromViewController.team2Array)
-//        }catch {
-//            print("Error fatcing data from context \(error)")
-//        }
-//
-//    }
     
-//    func loadTeam2Details() {
-//        let request: NSFetchRequest<PlayerDetails> = PlayerDetails.fetchRequest()
-//
-//        do {
-//            MemberAddedFromViewController.team2Array = try TeamSelectionViewController.context.fetch(request)
-//            print("Bowler Details", MemberAddedFromViewController.team2Array)
-//        }catch {
-//            print("Error fatcing data from context \(error)")
-//        }
-//    }
+    func loadTempData() {
+        let predicate = NSPredicate(format: "parent.emailId MATCHES %@", (MemberAddedFromViewController.currentMatchUserDetail?.emailId)!)
+        
+        let request: NSFetchRequest<PlayerDetails> = PlayerDetails.fetchRequest()
+        
+        request.predicate = predicate
+        
+        do {
+            MemberAddedFromViewController.tempPlayerDetails = try RegistrationViewController.context.fetch(request)
+            print("Player Array: \(MemberAddedFromViewController.tempPlayerDetails)")
+        }catch {
+            print("Error fatching data from context \(error)")
+        }
+    }
 }

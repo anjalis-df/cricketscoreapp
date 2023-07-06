@@ -186,7 +186,7 @@
                                     <color key="baseForegroundColor" red="0.83778103568005535" green="0.77096104227946338" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="teamAbuttonClicked:" destination="w3A-P8-KJa" eventType="touchUpInside" id="DYp-B5-8Ka"/>
+                                    <action selector="selectTeamBtnClicked:" destination="w3A-P8-KJa" eventType="touchUpInside" id="BQe-XW-dIq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSk-rA-g1G">
@@ -282,9 +282,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="kuU-tJ-DgY"/>
                     <connections>
-                        <outlet property="TeamABtn" destination="eIB-ku-9iF" id="oyw-Bi-8Fh"/>
                         <outlet property="resetBtn" destination="Nmg-jr-Lqj" id="14O-ag-3jx"/>
                         <outlet property="runningMatch" destination="cSk-rA-g1G" id="0bA-vg-DGX"/>
+                        <outlet property="selectTeamBtn" destination="eIB-ku-9iF" id="gOP-sH-d17"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXr-mZ-txl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1274,21 +1274,22 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ballDeliveredbyBowler" destination="jq6-mb-RjF" id="SBX-Wx-VB3"/>
                         <outlet property="ballbatsman1" destination="l4Q-zw-qdH" id="M6P-Jl-B9e"/>
                         <outlet property="ballbatsman2" destination="4jz-u3-A8D" id="Lgr-1x-kYi"/>
                         <outlet property="batsman1" destination="v3f-8U-7Kv" id="7Fv-zZ-NRO"/>
                         <outlet property="batsman2" destination="9ja-gw-7zr" id="QE6-of-b9I"/>
                         <outlet property="bowler" destination="Vei-NU-XCd" id="Ky2-hY-Ccy"/>
+                        <outlet property="bowlerPlayedOver" destination="jq6-mb-RjF" id="K78-XE-J6p"/>
+                        <outlet property="bowlerRunCount" destination="IPQ-PF-Cvi" id="Bsp-q1-VUT"/>
+                        <outlet property="bowlerWicket" destination="Rwm-bq-Bmn" id="cmO-mD-YWU"/>
                         <outlet property="fourOfBatsman1" destination="Ohc-pf-3nf" id="Iux-JT-lrf"/>
                         <outlet property="fourOfBatsman2" destination="pFg-Bl-2ho" id="kqY-SW-TvU"/>
                         <outlet property="fourOverBall" destination="T9W-mJ-9Df" id="0I6-tc-9fe"/>
-                        <outlet property="maidenOverCount" destination="G5D-tS-TZ7" id="8bb-ja-idz"/>
+                        <outlet property="maidenOver" destination="G5D-tS-TZ7" id="oDt-d0-Ivm"/>
                         <outlet property="noBall" destination="MQ2-vA-zyy" id="7fl-PU-smd"/>
                         <outlet property="oneOverBall" destination="Oin-lG-HVh" id="bL8-jB-HiH"/>
                         <outlet property="runOfBatsman1" destination="2ox-Vn-mKS" id="4wf-eg-gcp"/>
                         <outlet property="runOfBatsman2" destination="fQ9-vf-Ori" id="n0G-Ei-hcT"/>
-                        <outlet property="runOverBall" destination="IPQ-PF-Cvi" id="Mfp-KA-lBS"/>
                         <outlet property="sixOfBatsman1" destination="JsB-Vs-lrh" id="2eW-Sc-JMw"/>
                         <outlet property="sixOfBatsman2" destination="Bbb-kv-ZP9" id="hRV-jW-2px"/>
                         <outlet property="sixOverBall" destination="H8W-ec-U8J" id="2vc-62-33b"/>
@@ -1302,7 +1303,6 @@
                         <outlet property="totalRunOfTeam1" destination="vuf-3g-XbA" id="6PA-Sd-f2g"/>
                         <outlet property="totalRunOfTeam2" destination="EQo-Hf-qEy" id="j93-qc-wEb"/>
                         <outlet property="twoOverBall" destination="vmg-gr-OiL" id="a8Z-H8-bkk"/>
-                        <outlet property="wicketOverBall" destination="Rwm-bq-Bmn" id="EOj-LC-4SK"/>
                         <outlet property="wideBall" destination="otr-Gb-om9" id="fpi-pu-jnR"/>
                         <outlet property="winningTeamName" destination="aAq-ic-bRv" id="CUl-dy-AYt"/>
                         <outlet property="zeroOverBall" destination="wqV-RH-jYI" id="Rte-Zn-WWk"/>

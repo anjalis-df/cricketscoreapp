@@ -28,10 +28,10 @@ class ScoreBoardViewController: UIViewController {
     @IBOutlet var sixOfBatsman1: UILabel!
     @IBOutlet var sixOfBatsman2: UILabel!
     
-    @IBOutlet var ballDeliveredbyBowler: UILabel!
-    @IBOutlet var maidenOverCount: UILabel!
-    @IBOutlet var runOverBall: UILabel!
-    @IBOutlet var wicketOverBall: UILabel!
+    @IBOutlet var bowlerPlayedOver: UILabel!
+    @IBOutlet var maidenOver: UILabel!
+    @IBOutlet var bowlerRunCount: UILabel!
+    @IBOutlet var bowlerWicket: UILabel!
     
     @IBOutlet var zeroOverBall: UIButton!
     @IBOutlet var oneOverBall: UIButton!
@@ -56,46 +56,54 @@ class ScoreBoardViewController: UIViewController {
     
     var totalFourOfBatsman1: Int! = 0
     var totalFourOfBatsman2: Int! = 0
-    var totalFourOfBowler: Int! = 0
+    
     var totalSixOfBatsman1: Int! = 0
     var totalSixOfBatsman2: Int! = 0
-    var totalSixOfBowler: Int! = 0
+    
     var totalRunOfBatsman1: Int! = 0
     var totalRunOfBatsman2: Int! = 0
-    var totalRunOfBowler: Int! = 0
+    
     var totalBallPlayByBatsman1: Int! = 0
     var totalBallPlayByBatsman2: Int! = 0
+    
+    var totalFourOfBowler: Int! = 0
+    var totalSixOfBowler: Int! = 0
+    var totalRunOfBowler: Int! = 0
     var totalBallPlayByBowler: Int! = 0
-    var overOfBowler: Int! = 0
-    var runOfBowler: Int! = 0
-    var totalBall: Int! = 0
-    var totalRun: Int! = 0
-    var totalOver: Int! = 0
+    var bowlerOverCount: Int! = 0
+    var bowlerWicketCount: Int! = 0
+    
+    var totalBallCount: Int! = 0
+    var totalRunCount: Int! = 0
+    var totalOverCount: Int! = 0
+    var totalWicketCount: Int! = 0
+    var maidenOverCount: Int! = 0
+    
     var batsman1OnStrike: Bool!
     var batsmanAdded: Bool = false
     var bowlerAdded: Bool = false
     var currentBatsman: String? = ""
     var isCurrentBatsman1: Bool = false
     var wicket : Bool = false
-    var totalWicketCount: Int! = 0
-    var maidenCount: Int! = 0
     var runAccordingOver: Int! = 0
-    var batsmanDetailArray = [PlayerDetails]()
-    var bowlerDetailArray = [PlayerDetails]()
     var winningTeamNameForThisVC : String?
     
-   // let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var player1WicketStatus: Bool = false
+    var player2WicketStatus: Bool = false
+    var player1CurrentIndex: Int?
+    var player2CurrentIndex: Int?
+    
+    var batsmanDetailArray = [PlayerDetails]()
+    var bowlerDetailArray = [PlayerDetails]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("batsmanDetailArray: \(batsmanDetailArray)")
         print("BowlerDetailArray: \(bowlerDetailArray)")
+        
+        self.winningTeamName.text = "\(UserDefaults.standard.string(forKey: "TeamA")!) vs \(UserDefaults.standard.string(forKey: "TeamB")!)"
+        
         if TeamSelectionViewController.isRunningMatch {
-            print("Last Player 1: ", UserDefaults.standard.string(forKey: "Batsman1"))
-            print("Last Player 2: ", UserDefaults.standard.string(forKey: "Batsman2"))
-            print("Last Bowler: ", UserDefaults.standard.string(forKey: "Bowler"))
-            
-            
             
             self.loadPlayer()
             
@@ -125,12 +133,12 @@ class ScoreBoardViewController: UIViewController {
                 if count == 2{
                     break
                 }
-                if player.name == batsman1 {
+                if player.playerName == batsman1 {
                     tempB1 = player
                     player1Index = index
                     count += 1
                 }
-                if player.name == batsman2 {
+                if player.playerName == batsman2 {
                     tempB2 = player
                     player2Index = index
                     count += 1
@@ -141,7 +149,7 @@ class ScoreBoardViewController: UIViewController {
             index = 0
             
             for player in bowlerDetailArray {
-                if player.name == bowler {
+                if player.playerName == bowler {
                     tempBowler = player
                     break
                 }
@@ -149,38 +157,35 @@ class ScoreBoardViewController: UIViewController {
             
             self.batsman1.text = batsman1
             self.batsman2.text = batsman2
-            self.bowler.text = tempBowler?.name
+            self.bowler.text = tempBowler?.playerName
             
-            self.runOfBatsman1.text = String(batsmanDetailArray[player1Index!].runCount)
-            self.runOfBatsman2.text = String(batsmanDetailArray[player2Index!].runCount)
+            self.runOfBatsman1.text = String(batsmanDetailArray[player1Index!].playerRunCount)
+            self.runOfBatsman2.text = String(batsmanDetailArray[player2Index!].playerRunCount)
             
-            self.ballbatsman1.text = String(batsmanDetailArray[player1Index!].ballCount)
-            self.ballbatsman2.text = String(batsmanDetailArray[player2Index!].ballCount)
+            self.ballbatsman1.text = String(batsmanDetailArray[player1Index!].playerBallCount)
+            self.ballbatsman2.text = String(batsmanDetailArray[player2Index!].playerBallCount)
             
-            self.fourOfBatsman1.text = String(batsmanDetailArray[player1Index!].fourCount)
-            self.fourOfBatsman2.text = String(batsmanDetailArray[player2Index!].fourCount)
+            self.fourOfBatsman1.text = String(batsmanDetailArray[player1Index!].playerFourCount)
+            self.fourOfBatsman2.text = String(batsmanDetailArray[player2Index!].playerFourCount)
             
-            self.sixOfBatsman1.text = String(batsmanDetailArray[player1Index!].sixCount)
-            self.sixOfBatsman2.text = String(batsmanDetailArray[player2Index!].sixCount)
+            self.sixOfBatsman1.text = String(batsmanDetailArray[player1Index!].playerSixCount)
+            self.sixOfBatsman2.text = String(batsmanDetailArray[player2Index!].playerSixCount)
             
             
-            self.ballDeliveredbyBowler.text = String(bowlerDetailArray[index].overCount)
-            self.runOverBall.text = String(bowlerDetailArray[index].runCount)
-            self.wicketOverBall.text = String(bowlerDetailArray[index].wicketCount)
+            self.bowlerPlayedOver.text = String(bowlerDetailArray[index].playerOverCount)
+            self.maidenOver.text = String(bowlerDetailArray[index].playerMaidenOverCount)
+            self.bowlerRunCount.text = String(bowlerDetailArray[index].playerRunCount)
+            self.bowlerWicket.text = String(bowlerDetailArray[index].playerWicketCount)
             
-            self.totalRunOfTeam1.text = String(totalRun)
-            self.totalBallOfTeam1.text = String(totalBall)
-            self.totalOverOfTeam1.text = String(bowlerDetailArray[index].overCount)
+            self.totalRunOfTeam1.text = String(bowlerDetailArray[index].totalRunCount)
+            self.totalBallOfTeam1.text = String(bowlerDetailArray[index].totalBallCount)
+            self.totalOverOfTeam1.text = String(bowlerDetailArray[index].totalOverCount)
+            
             
             
         }else {
             
         }
-
-//        print("Team A: \(TeamDetailViewController.teamDetailArray[0].team_name!)")
-//        print("Team B: \(TeamDetailViewController.teamDetailArray[1].team_name!)")
-//        winningTeamName.text = TeamDetailViewController.teamDetailArray[0].team_name! + " Vs " + TeamDetailViewController.teamDetailArray[1].team_name!
-//        print(self.winningTeamName!.text)
         batsman1.borderStyle = .bezel
         batsman1.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
         batsman2.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
@@ -203,8 +208,8 @@ class ScoreBoardViewController: UIViewController {
         }
         batsmanAdded = true
         
-        let bts = isPlayerinTeam(playerName: batsman1.text!, playerType: "Batsman")
-        let bts1 = isPlayerinTeam(playerName: batsman2.text!, playerType: "Batsman")
+        let bts = isPlayerinTeam(playerName: batsman1.text!, playerType: "Batsman", Batsman: 1)
+        let bts1 = isPlayerinTeam(playerName: batsman2.text!, playerType: "Batsman", Batsman: 2)
         
         if bts && bts1 {
             UserDefaults.standard.set(batsman1.text, forKey: "Batsman1")
@@ -215,9 +220,9 @@ class ScoreBoardViewController: UIViewController {
             print("BatsMan2 Name: \(batsman2.text!)")
             batsman1.isUserInteractionEnabled = false
             batsman2.isUserInteractionEnabled = false
-            self.overOfBowler = 0
+            self.bowlerOverCount = 0
             return
-        } else {
+        }else {
             self.displayAlertMessage(messageToDisplay: "\(batsman1.text!) and \(batsman2.text!) is not in your team.")
             return
         }
@@ -254,25 +259,25 @@ class ScoreBoardViewController: UIViewController {
         }
         
         let score = sender.currentTitle!
-        totalBall += 1
-        totalRun += Int(score)!
-        totalBallOfTeam1.text = String(totalBall)
-        if totalBall%6 == 0 {
+        totalBallCount += 1
+        totalRunCount += Int(score)!
+        totalBallOfTeam1.text = String(totalBallCount)
+        if totalBallCount%6 == 0 {
             if runAccordingOver == 0 {
-                self.maidenCount += 1
-                self.maidenOverCount.text = String(maidenCount)
+                self.maidenOverCount += 1
+                self.maidenOver.text = String(maidenOverCount)
             }
-            overOfBowler += 1
+            bowlerOverCount += 1
             runAccordingOver = 0
-            totalOver += 1
-            totalOverOfTeam1.text = String(totalOver)
+            totalOverCount += 1
+            totalOverOfTeam1.text = String(totalOverCount)
         }
-        totalRunOfTeam1.text = String(totalRun)
-        ballDeliveredbyBowler.text = String(overOfBowler)
+        totalRunOfTeam1.text = String(totalRunCount)
+        bowlerPlayedOver.text = String(bowlerOverCount)
         runAccordingOver = runAccordingOver + Int(score)!
-        print("Total Ball: \(totalBall!)")
-        print("Total Run: \(totalRun!)")
-        print("Total Over: \(totalOver!)")
+        print("Total Ball: \(totalBallCount!)")
+        print("Total Run: \(totalRunCount!)")
+        print("Total Over: \(totalOverCount!)")
         print("score: \(score)")
 
 
@@ -280,7 +285,7 @@ class ScoreBoardViewController: UIViewController {
             if batsman1.borderStyle == .bezel {
                 totalRunOfBatsman1 += Int(score)!
                 totalBallPlayByBatsman1 += 1
-                runOfBowler += 1
+                totalRunOfBowler += 1
                 batsman1.borderStyle = .line
                 batsman2.borderStyle = .bezel
                 runOfBatsman1.text = String(totalRunOfBatsman1)
@@ -290,7 +295,7 @@ class ScoreBoardViewController: UIViewController {
             }else {
                 totalRunOfBatsman2 += Int(score)!
                 totalBallPlayByBatsman2 += 1
-                runOfBowler += 1
+                totalRunOfBowler += 1
                 batsman2.borderStyle = .line
                 batsman1.borderStyle = .bezel
                 runOfBatsman2.text = String(totalRunOfBatsman2)
@@ -310,7 +315,7 @@ class ScoreBoardViewController: UIViewController {
                     sixOfBatsman1.text = String(totalSixOfBatsman1)
                 }
                 totalRunOfBatsman1 += Int(score)!
-                runOfBowler += Int(score)!
+                totalRunOfBowler += Int(score)!
                 totalBallPlayByBatsman1 += 1
                 ballbatsman1.text = String(totalBallPlayByBatsman1)
                 runOfBatsman1.text = String(totalRunOfBatsman1)
@@ -329,7 +334,7 @@ class ScoreBoardViewController: UIViewController {
                     sixOfBatsman2.text = String(totalSixOfBatsman2)
                 }
                 totalRunOfBatsman2 += Int(score)!
-                runOfBowler += Int(score)!
+                totalRunOfBowler += Int(score)!
                 totalBallPlayByBatsman2 += 1
                 ballbatsman2.text = String(totalBallPlayByBatsman2)
                 runOfBatsman2.text = String(totalRunOfBatsman2)
@@ -339,9 +344,9 @@ class ScoreBoardViewController: UIViewController {
                 isCurrentBatsman1 = false
             }
         }else if score == "WD" {
-            self.totalRun += 1
-            runOfBowler += 1
-            self.totalBall += 1
+            self.totalRunCount += 1
+            totalRunOfBowler += 1
+            self.totalBallCount += 1
             self.totalBallPlayByBowler += 1
         }
         if score == "W" {
@@ -364,35 +369,33 @@ class ScoreBoardViewController: UIViewController {
             setScoreBoardForBowler(bowlerName: bowler.text!)
         }
         
-//        if batsman1.borderStyle == .bezel {
-//            batsman1OnStrike = true
-//            //currentBatsman = batsman1.text!
-//            print("CurrentBatsman: \(currentBatsman!)")
-//            setScoreBoard(isBatsman1: false, batsManName: currentBatsman!)
-//        }else {
-//            batsman1OnStrike = false
-//            //currentBatsman = batsman2.text!
-//            print("CurrentBatsman: \(currentBatsman!)")
-//            setScoreBoard(isBatsman1: true, batsManName: currentBatsman!)
-//        }
-        
         print("Current Batsman: \(currentBatsman!)")
         
         
     }
     
-    func isPlayerinTeam(playerName: String, playerType: String) -> Bool {
+    func isPlayerinTeam(playerName: String, playerType: String, Batsman: Int = 0) -> Bool {
         
         if playerType == "Bowler" {
             for player in bowlerDetailArray {
-                if player.name == playerName {
+                if player.playerName == playerName {
                     return true
                 }
             }
             return false
         }else {
             for player in batsmanDetailArray {
-                if player.name == playerName {
+                
+                if Batsman == 1 && player.wicketStatus != true {
+                    self.player1WicketStatus = true
+                }else if Batsman == 2 {
+                    self.player2WicketStatus = true
+                }else {
+                    self.player1WicketStatus = false
+                    self.player2WicketStatus = false
+                }
+                
+                if player.playerName == playerName {
                     return true
                 }
             }
@@ -407,41 +410,6 @@ class ScoreBoardViewController: UIViewController {
             print("Error saveing context: ", error)
         }
     }
-    
-//    func loadBatsman() {
-//        let request: NSFetchRequest<PlayerDetails> = PlayerDetails.fetchRequest()
-//        do {
-//            batsmanDetailArray = try RegistrationViewController.context.fetch(request)
-//            print("Item Array: ", batsmanDetailArray)
-//        }catch {
-//            print("Error fatching data from context \(error)")
-//        }
-//    }
-//
-//    func loadBowler() {
-//        let requeset: NSFetchRequest<PlayerDetails> = PlayerDetails.fetchRequest()
-//        do {
-//            bowlerDetailArray = try RegistrationViewController.context.fetch(requeset)
-//            print("Bowler Array: ",bowlerDetailArray)
-//        }catch {
-//            print("Error fatching data from context \(error)")
-//        }
-//    }
-    
-//    func loadPlayerTemp(){
-//        let predicate = NSPredicate(format: "parent.emailId MATCHES %@", (MemberAddedFromViewController.currentMatchUserDetail?.emailId)!)
-//        
-//        let request: NSFetchRequest<PlayerDetails> = PlayerDetails.fetchRequest()
-//        
-//        request.predicate = predicate
-//        
-//        do {
-//            MemberAddedFromViewController.playerDetails = try RegistrationViewController.context.fetch(request)
-//        }catch{
-//            print("Got Error \(error)")
-//        }
-//    }
-    
     
     func loadPlayer() {
         let predicate = NSPredicate(format: "parent.emailId MATCHES %@", (MemberAddedFromViewController.currentMatchUserDetail?.emailId)!)
@@ -479,7 +447,7 @@ class ScoreBoardViewController: UIViewController {
         
         if winningTeamSelection == "Bowling" {
             for player in MemberAddedFromViewController.playerDetails {
-                if teamA == player.teamName {
+                if winningTeamName == player.teamName {
                     self.bowlerDetailArray.append(player)
                     i += 1
                 }else {
@@ -491,7 +459,7 @@ class ScoreBoardViewController: UIViewController {
             print("Batsman Array: \(self.batsmanDetailArray)")
         }else {
             for player in MemberAddedFromViewController.playerDetails{
-                if teamA == player.teamName {
+                if winningTeamName == player.teamName {
                     self.batsmanDetailArray.append(player)
                     i += 1
                 }else {
@@ -512,7 +480,7 @@ class ScoreBoardViewController: UIViewController {
         var index = 0
         for player in batsmanDetailArray {
             print("Index: \(index)")
-            if batsManName == player.name {
+            if batsManName == player.playerName {
                 currentPlayer = player
                 print("CurrentPlayer: \(currentPlayer)")
                 break
@@ -523,25 +491,27 @@ class ScoreBoardViewController: UIViewController {
         print("Player Playing: \(currentPlayer)")
     
         if isBatsman1 {
-            currentPlayer?.name = currentBatsman
-            currentPlayer?.ballCount = Int16(self.ballbatsman1.text!) ?? 0
-            currentPlayer?.runCount = Int16(self.runOfBatsman1.text!) ?? 0
-            currentPlayer?.overCount = Int16(self.totalOver)
-            currentPlayer?.fourCount = Int16(self.fourOfBatsman1.text!) ?? 0
-            currentPlayer?.sixCount = Int16(self.sixOfBatsman1.text!) ?? 0
-            currentPlayer?.totalRunCount = Int16(self.totalRun)
-            currentPlayer?.totalBallCount = Int16(self.totalBall)
+            currentPlayer?.playerName = currentBatsman
+            currentPlayer?.playerBallCount = Int16(self.ballbatsman1.text!) ?? 0
+            currentPlayer?.playerRunCount = Int16(self.runOfBatsman1.text!) ?? 0
+            currentPlayer?.playerOverCount = Int16(self.totalOverCount)
+            currentPlayer?.playerFourCount = Int16(self.fourOfBatsman1.text!) ?? 0
+            currentPlayer?.playerSixCount = Int16(self.sixOfBatsman1.text!) ?? 0
+            currentPlayer?.totalRunCount = Int16(self.totalRunCount)
+            currentPlayer?.totalBallCount = Int16(self.totalBallCount)
+            currentPlayer?.totalOverCount = Int16(self.totalOverCount)
             currentPlayer?.wicketStatus = wicket
             currentPlayer?.isBatsman = true
         } else {
-            currentPlayer?.name = currentBatsman
-            currentPlayer?.ballCount = Int16(self.ballbatsman2.text!) ?? 0
-            currentPlayer?.runCount = Int16(self.runOfBatsman2.text!) ?? 0
-            currentPlayer?.overCount = Int16( self.totalOver)
-            currentPlayer?.fourCount = Int16(self.fourOfBatsman2.text!) ?? 0
-            currentPlayer?.sixCount = Int16(self.sixOfBatsman2.text!) ?? 0
-            currentPlayer?.totalRunCount = Int16(self.totalRun)
-            currentPlayer?.totalBallCount = Int16(self.totalBall)
+            currentPlayer?.playerName = currentBatsman
+            currentPlayer?.playerBallCount = Int16(self.ballbatsman2.text!) ?? 0
+            currentPlayer?.playerRunCount = Int16(self.runOfBatsman2.text!) ?? 0
+            currentPlayer?.playerOverCount = Int16( self.totalOverCount)
+            currentPlayer?.playerFourCount = Int16(self.fourOfBatsman2.text!) ?? 0
+            currentPlayer?.playerSixCount = Int16(self.sixOfBatsman2.text!) ?? 0
+            currentPlayer?.totalRunCount = Int16(self.totalRunCount)
+            currentPlayer?.totalBallCount = Int16(self.totalBallCount)
+            currentPlayer?.totalOverCount = Int16(self.totalOverCount)
             currentPlayer?.wicketStatus = wicket
             currentPlayer?.isBatsman = true
         }
@@ -558,23 +528,24 @@ class ScoreBoardViewController: UIViewController {
         var index = 0
         for bowler in bowlerDetailArray {
             print("Index: \(index)")
-            if bowlerName == bowler.name {
+            if bowlerName == bowler.playerName {
                 currentBowler = bowler
                 print("CurrentPlayer: \(currentBowler)")
                 break
             }
             index += 1
         }
-        currentBowler?.name = bowlerName
-        currentBowler?.ballCount = Int16(self.totalBallPlayByBowler)
-        currentBowler?.runCount = Int16(self.runOfBowler)
-        currentBowler?.overCount = Int16(self.totalOver)
-        currentBowler?.fourCount = Int16(self.totalFourOfBowler)
-        currentBowler?.sixCount = Int16(self.totalSixOfBowler)
-        currentBowler?.wicketCount = Int16(self.totalWicketCount)
-        currentBowler?.totalRunCount = Int16(self.totalRun)
-        currentBowler?.totalBallCount = Int16(self.totalBall)
-        currentBowler?.maidenOverCount = Int16(self.maidenCount)
+        currentBowler?.playerName = bowlerName
+        currentBowler?.playerBallCount = Int16(self.totalBallPlayByBowler)
+        currentBowler?.playerRunCount = Int16(self.totalRunOfBowler)
+        currentBowler?.playerOverCount = Int16(self.totalOverCount)
+        currentBowler?.playerFourCount = Int16(self.totalFourOfBowler)
+        currentBowler?.playerSixCount = Int16(self.totalSixOfBowler)
+        currentBowler?.playerWicketCount = Int16(self.totalWicketCount)
+        currentBowler?.totalRunCount = Int16(self.totalRunCount)
+        currentBowler?.totalBallCount = Int16(self.totalBallCount)
+        currentBowler?.totalOverCount = Int16(self.totalOverCount)
+        currentBowler?.playerMaidenOverCount = Int16(self.maidenOverCount)
         currentBowler?.isBatsman = false
         
         self.bowlerDetailArray[index] = currentBowler!

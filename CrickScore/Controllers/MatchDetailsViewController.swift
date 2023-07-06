@@ -22,8 +22,6 @@ class MatchDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print("Array 1: \(MemberAddedFromViewController.team1Array)")
-//        print("Array 2: \(MemberAddedFromViewController.team2Array)")
     }
 
     @IBAction func tossAction(_ sender: UIButton) {
@@ -37,11 +35,9 @@ class MatchDetailsViewController: UIViewController {
         print("Result: \(result)")
         self.isTossButtonClicked = true
         if result == 1 {
-//            winningTeamLabel.text = TeamDetailViewController.teamDetailArray[0].team_name
             winningTeamLabel.text = UserDefaults.standard.string(forKey: "TeamA")
             winningTeamName = winningTeamLabel.text!
         }else {
-//            winningTeamLabel.text = TeamDetailViewController.teamDetailArray[1].team_name
             winningTeamLabel.text = UserDefaults.standard.string(forKey: "TeamB")
             winningTeamName = winningTeamLabel.text!
         }
@@ -50,15 +46,11 @@ class MatchDetailsViewController: UIViewController {
         
         self.tossButton.alpha = 0.5
         self.tossButton.isUserInteractionEnabled = false
-        print("Winning Team: \(winningTeamName)")
+        print("Winning Team: \(winningTeamName!)")
         
         scoreBoardVC = self.storyboard?.instantiateViewController(withIdentifier: "ScoreBoardViewController") as! ScoreBoardViewController
         scoreBoardVC?.winningTeamNameForThisVC = winningTeamName
-        
-//        print("Team1 array Parent: \(TeamDetailViewController.teamDetailArray[0].team_name)")
-//        print("Team2 array Parent: \(TeamDetailViewController.teamDetailArray[1].team_name)")
-        
-        
+
     }
     
     @IBAction func battingSelected(_ sender: UIButton) {
@@ -113,8 +105,8 @@ class MatchDetailsViewController: UIViewController {
         let teamA = UserDefaults.standard.string(forKey: "TeamA")
         let teamB = UserDefaults.standard.string(forKey: "TeamB")
         
-        print("Team A \(teamA)")
-        print("Team B \(teamB)")
+        print("Team A \(teamA!)")
+        print("Team B \(teamB!)")
         
         var i = 0
         var j = 0
@@ -144,20 +136,6 @@ class MatchDetailsViewController: UIViewController {
                 }
             }
         }
-        
-//        print("Team1 Array: \(MemberAddedFromViewController.team1Array)")
-//        print("Team2 Array: \(MemberAddedFromViewController.team2Array)")
-//
-//        if TeamDetailViewController.teamDetailArray[0].team_name == winningTeamName {
-//            scoreBoardVC?.batsmanDetailArray = MemberAddedFromViewController.team1Array
-//            scoreBoardVC?.bowlerDetailArray = MemberAddedFromViewController.team2Array
-//        }else {
-//            scoreBoardVC?.bowlerDetailArray = MemberAddedFromViewController.team1Array
-//            scoreBoardVC?.batsmanDetailArray = MemberAddedFromViewController.team2Array
-//        }
-        
-//        scoreBoardVC = self.storyboard?.instantiateViewController(withIdentifier: "ScoreBoardViewController") as! ScoreBoardViewController
-//        scoreBoardVC?.winningTeamName.text = winningTeamName
         print(scoreBoardVC?.winningTeamNameForThisVC)
         self.navigationController?.pushViewController(scoreBoardVC!, animated: true)
     }

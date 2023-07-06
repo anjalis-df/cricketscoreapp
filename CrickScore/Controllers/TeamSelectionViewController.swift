@@ -9,7 +9,7 @@ import UIKit
 
 class TeamSelectionViewController: UIViewController {
     
-    @IBOutlet var TeamABtn: UIButton!
+    @IBOutlet var selectTeamBtn: UIButton!
     @IBOutlet var resetBtn: UIButton!
     @IBOutlet var runningMatch: UIButton!
     
@@ -19,13 +19,13 @@ class TeamSelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        TeamABtn.layer.cornerRadius = 45
+        selectTeamBtn.layer.cornerRadius = 45
         resetBtn.layer.cornerRadius = 45
         runningMatch.layer.cornerRadius = 45
         
     }
     
-    @IBAction func teamAbuttonClicked(_ sender: Any) {
+    @IBAction func selectTeamBtnClicked(_ sender: Any) {
         let teamDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamDetails") as! TeamDetailViewController
         
         self.navigationController?.pushViewController(teamDetailsVC, animated: true)
