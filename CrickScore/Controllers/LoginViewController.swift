@@ -15,37 +15,54 @@ class LoginViewController: UIViewController {
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var forgetPasswordButton: UIButton!
     @IBOutlet var createAccountButton: UIButton!
-    
+    static var userIndex: Int! 
     static var isForgetPassword = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 15
         self.loadUserDetails()
+        let userLoggedout = UserDefaults.standard.string(forKey: "UserLoggedOut")
+        if  userLoggedout != nil && userLoggedout == "0" {
+            print("Logged Email: \(UserDefaults.standard.string(forKey: "LastLoggedEmail"))")
+            print("Logged Password: \(UserDefaults.standard.string(forKey: "LastLoggedPassword"))")
+            
+            MemberAddedFromViewController.currentMatchUserDetail = RegistrationViewController.userDetails[LoginViewController.userIndex!]
+            print("email: \(MemberAddedFromViewController.currentMatchUserDetail?.emailId)")
+            print("email: \(MemberAddedFromViewController.currentMatchUserDetail?.password)")
+            
+            let teamVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamSelection")// as! TeamSelectionViewController
+            self.navigationController?.pushViewController(teamVC!, animated: true)
+        }
     }
 
     @IBAction func clickedLoginButton(_ sender: Any) {
         
         if emailTextField.text?.isEmpty == true {
             self.displayAlertMessage(messageToDisplay: "UserName can't be empty.")
+            return
         }
 
         if !self.isValidEmailAddress(givenEmailAddress: emailTextField.text!) {
             self.displayAlertMessage(messageToDisplay: "Email address is not valid format.")
+            return
         }
 
         if passwordTextField.text?.isEmpty == true {
             self.displayAlertMessage(messageToDisplay: "Password can't be empty.")
+            return
         }
 
         if !self.isValiePassword(str: passwordTextField.text!) {
             self.displayAlertMessage(messageToDisplay: "Password is not secure. Please Enter secure password")
+            return
         }
         
         if !checkingUserExistance() {
             displayAlertMessage(messageToDisplay: "Email or Password is Incorrect.")
             return
         }
+        UserDefaults.standard.set(false, forKey: "UserLoggedOut")
         
         let teamVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamSelection")// as! TeamSelectionViewController
         self.navigationController?.pushViewController(teamVC!, animated: true)
@@ -61,23 +78,26 @@ class LoginViewController: UIViewController {
     }
     
     
-    @IBAction func createNewAccount(_ sender: Any) {
-        
+    @IBAction func createNewAccount(_ sender: Any) {        
         let registrationVC = self.storyboard?.instantiateViewController(withIdentifier: "RegistrationVC")
         self.navigationController?.pushViewController(registrationVC!, animated: true)
     }
     
     func checkingUserExistance() -> Bool {
         var isExist = false
+        var index = 0
         for user in RegistrationViewController.userDetails{
             print("User: \(user)")
             if (user.emailId == self.emailTextField.text) && (user.password == self.passwordTextField.text){
                 UserDefaults.standard.set(self.emailTextField.text, forKey: "LastLoggedEmail")
                 UserDefaults.standard.set(self.passwordTextField.text, forKey: "LastLoggedPassword")
+                UserDefaults.standard.set(index, forKey: "LastLoggedIndex")
+                LoginViewController.userIndex = index
                 MemberAddedFromViewController.currentMatchUserDetail = user
                 isExist = true
                 return isExist
             }
+            index += 1
         }
         return isExist
     }

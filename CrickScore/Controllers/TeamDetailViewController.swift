@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class TeamDetailViewController: UIViewController {
+class TeamDetailViewController: UIViewController, UINavigationBarDelegate {
 
     @IBOutlet var teamLogo: UIImageView!
     @IBOutlet var teamName: UITextField!

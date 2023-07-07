@@ -98,6 +98,7 @@ class ScoreBoardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target:self, action: #selector(goBackToTeamSelectionVC))
         print("batsmanDetailArray: \(batsmanDetailArray)")
         print("BowlerDetailArray: \(bowlerDetailArray)")
         
@@ -193,6 +194,10 @@ class ScoreBoardViewController: UIViewController {
             
     }
     
+   @objc func goBackToTeamSelectionVC() {
+        let teamSelectionvc = self.storyboard?.instantiateViewController(withIdentifier: "TeamSelection") as! TeamSelectionViewController
+        self.navigationController?.pushViewController(teamSelectionvc, animated: true)
+    }
     
     @objc func textFieldDidChange(_ TextField: UITextField){
         print("TextField changed")
@@ -210,6 +215,13 @@ class ScoreBoardViewController: UIViewController {
         
         let bts = isPlayerinTeam(playerName: batsman1.text!, playerType: "Batsman", Batsman: 1)
         let bts1 = isPlayerinTeam(playerName: batsman2.text!, playerType: "Batsman", Batsman: 2)
+        
+        if (player1WicketStatus && player2WicketStatus) || (player1WicketStatus || player2WicketStatus) {
+            displayAlertMessage(messageToDisplay: "\(batsman1.text!) is already out. Can't play again.")
+            return
+        } else if !player2WicketStatus {
+            displayAlertMessage(messageToDisplay: "\(batsman2.text) is already out. Can't play again.")
+        }
         
         if bts && bts1 {
             UserDefaults.standard.set(batsman1.text, forKey: "Batsman1")
@@ -386,16 +398,21 @@ class ScoreBoardViewController: UIViewController {
         }else {
             for player in batsmanDetailArray {
                 
-                if Batsman == 1 && player.wicketStatus != true {
-                    self.player1WicketStatus = true
-                }else if Batsman == 2 {
-                    self.player2WicketStatus = true
-                }else {
-                    self.player1WicketStatus = false
-                    self.player2WicketStatus = false
-                }
+//                if Batsman == 1 && player.wicketStatus != true {
+//                    self.player1WicketStatus = true
+//                }else if Batsman == 2 {
+//                    self.player2WicketStatus = true
+//                }else {
+//                    self.player1WicketStatus = false
+//                    self.player2WicketStatus = false
+//                }
                 
                 if player.playerName == playerName {
+                    if Batsman == 1 {
+                        player1WicketStatus = player.wicketStatus
+                    }else if Batsman == 2 {
+                        player2WicketStatus = player.wicketStatus
+                    }
                     return true
                 }
             }

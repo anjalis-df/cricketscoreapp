@@ -453,6 +453,8 @@
                             <constraint firstItem="rfj-Ux-kpf" firstAttribute="top" secondItem="gGi-rH-tUb" secondAttribute="top" id="xCB-Ie-qmH"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addTeamButton" destination="IBG-Vf-HfK" id="Hzc-t7-4O4"/>
                         <outlet property="checkBox" destination="Yrg-4Z-GXg" id="I0o-YO-qHr"/>

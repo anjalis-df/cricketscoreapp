@@ -44,33 +44,46 @@ class RegistrationViewController: UIViewController {
         if LoginViewController.isForgetPassword {
             if newEmailTextField.text?.isEmpty == true{
                 self.displayAlertMessage(messageToDisplay: "Please Enter Email Address")
+                return
             }else if !self.isValidEmailAddress(givenEmailAddress: newEmailTextField.text!) {
                 self.displayAlertMessage(messageToDisplay: "Email address is not valid format.")
+                return
             }else if passwordTextField.text?.isEmpty == true {
                 self.displayAlertMessage(messageToDisplay: "Please Enter Password.")
+                return
             }else if !self.isValiePassword(str: passwordTextField.text!) {
                 self.displayAlertMessage(messageToDisplay: "Password is not secure. Please Enter secure password")
+                return
             }else if confirmPasswordTextField.text?.isEmpty == true {
                 self.displayAlertMessage(messageToDisplay: "Please Enter Confirm Password")
+                return
             }else if passwordTextField.text != confirmPasswordTextField.text {
                 self.displayAlertMessage(messageToDisplay: "Password and Confirm Password are not same")
+                return
             }
         }else {
             
             if nameTextField.text?.isEmpty == true {
                 self.displayAlertMessage(messageToDisplay: "Please Enter name first")
+                return
             }else if newEmailTextField.text?.isEmpty == true{
                 self.displayAlertMessage(messageToDisplay: "Please Enter Email Address")
+                return
             }else if !self.isValidEmailAddress(givenEmailAddress: newEmailTextField.text!) {
                 self.displayAlertMessage(messageToDisplay: "Email address is not valid format.")
+                return
             }else if passwordTextField.text?.isEmpty == true {
                 self.displayAlertMessage(messageToDisplay: "Please Enter Password.")
+                return
             }else if !self.isValiePassword(str: passwordTextField.text!) {
                 self.displayAlertMessage(messageToDisplay: "Password is not secure. Please Enter secure password")
+                return
             }else if confirmPasswordTextField.text?.isEmpty == true {
                 self.displayAlertMessage(messageToDisplay: "Please Enter Confirm Password")
+                return
             }else if passwordTextField.text != confirmPasswordTextField.text {
                 self.displayAlertMessage(messageToDisplay: "Password and Confirm Password are not same")
+                return
             }
             
         }
@@ -95,6 +108,7 @@ class RegistrationViewController: UIViewController {
         }
         
         self.addUserinArray()
+        UserDefaults.standard.set(true, forKey: "UserLoggedOut")
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -103,6 +117,8 @@ class RegistrationViewController: UIViewController {
         newUser.name = self.nameTextField.text
         newUser.emailId = self.newEmailTextField.text
         newUser.password = self.confirmPasswordTextField.text
+        newUser.haveTeam = false
+        newUser.teamCount = 0
         newUser.code = 0
         
         RegistrationViewController.userDetails.append(newUser)

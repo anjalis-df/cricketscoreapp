@@ -116,6 +116,8 @@ class MemberAddedFromViewController: UIViewController {
                 save()
             }
             loadTempData()
+            RegistrationViewController.userDetails[LoginViewController.userIndex!].haveTeam = true
+            RegistrationViewController.userDetails[LoginViewController.userIndex!].teamCount = RegistrationViewController.userDetails[LoginViewController.userIndex!].teamCount + 1
             self.navigationController?.pushViewController(MatchDetailsVC, animated: true)
         }else {
             let team = UserDefaults.standard.string(forKey: "TeamA")
