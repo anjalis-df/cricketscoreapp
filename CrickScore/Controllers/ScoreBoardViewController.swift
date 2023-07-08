@@ -54,6 +54,12 @@ class ScoreBoardViewController: UIViewController {
     @IBOutlet var submitToBatsman: UIButton!
     @IBOutlet var submitToBowler: UIButton!
     
+    @IBOutlet var nameOfBatsmanTeam: UILabel!
+    @IBOutlet var nameOfBowlerTeam: UILabel!
+    
+    var teamOfBatsman: String = ""
+    var teamOfBowler: String = ""
+    
     var totalFourOfBatsman1: Int! = 0
     var totalFourOfBatsman2: Int! = 0
     
@@ -103,6 +109,14 @@ class ScoreBoardViewController: UIViewController {
         print("BowlerDetailArray: \(bowlerDetailArray)")
         
         self.winningTeamName.text = "\(UserDefaults.standard.string(forKey: "TeamA")!) vs \(UserDefaults.standard.string(forKey: "TeamB")!)"
+        
+        if UserDefaults.standard.string(forKey: "WinningTeam") == "Batting" {
+            self.nameOfBatsmanTeam.text = UserDefaults.standard.string(forKey: "WinningTeam")
+            self.nameOfBowlerTeam.text = UserDefaults.standard.string(forKey: "LoserTeam")
+        } else {
+            self.nameOfBatsmanTeam.text = UserDefaults.standard.string(forKey: "LoserTeam")
+            self.nameOfBowlerTeam.text = UserDefaults.standard.string(forKey: "WinningTeam")
+        }
         
         if TeamSelectionViewController.isRunningMatch {
             
@@ -219,9 +233,10 @@ class ScoreBoardViewController: UIViewController {
         if (player1WicketStatus && player2WicketStatus) || (player1WicketStatus || player2WicketStatus) {
             displayAlertMessage(messageToDisplay: "\(batsman1.text!) is already out. Can't play again.")
             return
-        } else if !player2WicketStatus {
-            displayAlertMessage(messageToDisplay: "\(batsman2.text) is already out. Can't play again.")
         }
+//        else if !player2WicketStatus {
+//            displayAlertMessage(messageToDisplay: "\(batsman2.text) is already out. Can't play again.")
+//        }
         
         if bts && bts1 {
             UserDefaults.standard.set(batsman1.text, forKey: "Batsman1")
@@ -270,8 +285,11 @@ class ScoreBoardViewController: UIViewController {
             return
         }
         
+        let currentBowler = UserDefaults.standard.string(forKey: "Bowler")
+        
         let score = sender.currentTitle!
         totalBallCount += 1
+        totalBallPlayByBowler += 1
         totalRunCount += Int(score)!
         totalBallOfTeam1.text = String(totalBallCount)
         if totalBallCount%6 == 0 {
@@ -279,11 +297,13 @@ class ScoreBoardViewController: UIViewController {
                 self.maidenOverCount += 1
                 self.maidenOver.text = String(maidenOverCount)
             }
+            totalRunCount = 0
             bowlerOverCount += 1
             runAccordingOver = 0
             totalOverCount += 1
             totalOverOfTeam1.text = String(totalOverCount)
         }
+        
         totalRunOfTeam1.text = String(totalRunCount)
         bowlerPlayedOver.text = String(bowlerOverCount)
         runAccordingOver = runAccordingOver + Int(score)!
@@ -397,15 +417,6 @@ class ScoreBoardViewController: UIViewController {
             return false
         }else {
             for player in batsmanDetailArray {
-                
-//                if Batsman == 1 && player.wicketStatus != true {
-//                    self.player1WicketStatus = true
-//                }else if Batsman == 2 {
-//                    self.player2WicketStatus = true
-//                }else {
-//                    self.player1WicketStatus = false
-//                    self.player2WicketStatus = false
-//                }
                 
                 if player.playerName == playerName {
                     if Batsman == 1 {

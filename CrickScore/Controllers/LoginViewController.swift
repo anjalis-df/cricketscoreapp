@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
             print("Logged Email: \(UserDefaults.standard.string(forKey: "LastLoggedEmail"))")
             print("Logged Password: \(UserDefaults.standard.string(forKey: "LastLoggedPassword"))")
             
-            MemberAddedFromViewController.currentMatchUserDetail = RegistrationViewController.userDetails[LoginViewController.userIndex!]
+          //  MemberAddedFromViewController.currentMatchUserDetail = RegistrationViewController.userDetails[LoginViewController.userIndex!]
             print("email: \(MemberAddedFromViewController.currentMatchUserDetail?.emailId)")
             print("email: \(MemberAddedFromViewController.currentMatchUserDetail?.password)")
             

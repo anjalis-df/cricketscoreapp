@@ -14,30 +14,59 @@ class RegistrationViewController: UIViewController {
     @IBOutlet var headerLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
-    
     @IBOutlet var nameTextField: UITextField!
-    
     @IBOutlet var newEmailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-    
     @IBOutlet var submitButton: UIButton!
-    static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    @IBOutlet var eyeButtonOfPassword: UIButton!
+    @IBOutlet var eyeButtonOfConfirmPassword: UIButton!
     
+    var isPasswordEyeClicked: Bool = false
+    var isConfirmPassEyeClicked: Bool = false
+    
+    static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     static var userDetails = [UserRegistrationDetails]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.passwordTextField.isSecureTextEntry = true
+        self.confirmPasswordTextField.isSecureTextEntry = true
+        
+        eyeButtonOfPassword.setImage(UIImage.init(systemName: "eye"), for: .normal)
+        eyeButtonOfPassword.addTarget(self, action: #selector(passwordEyeButtonClicked), for: .touchUpInside)
+        eyeButtonOfConfirmPassword.setImage(UIImage(systemName: "eye"), for: .normal)
+        eyeButtonOfConfirmPassword.addTarget(self, action: #selector(confirmPasswordEyeButtonClicked), for: .touchUpInside)
+        
         if LoginViewController.isForgetPassword {
             self.nameLabel.isHidden = true
             self.nameTextField.isHidden = true
             self.headerLabel.text = "Reset Password"
-         //   self.secondView.frame = CGRect(x: 8, y: 200, width: 374, height: 300)
             emailLabel.topAnchor.constraint(equalTo: self.secondView.topAnchor, constant: 8).isActive = true
         }
         
+    }
+    
+    @objc func passwordEyeButtonClicked() {
+        isPasswordEyeClicked = !isPasswordEyeClicked
+        if isPasswordEyeClicked {
+            self.passwordTextField.isSecureTextEntry = false
+            self.eyeButtonOfPassword.setImage(UIImage.init(systemName: "eye.slash"), for: .normal)
+        }else {
+            self.passwordTextField.isSecureTextEntry = true
+            self.eyeButtonOfPassword.setImage(UIImage.init(systemName: "eye"), for: .normal)
+        }
+    }
+    
+    @objc func confirmPasswordEyeButtonClicked() {
+        isConfirmPassEyeClicked = !isConfirmPassEyeClicked
+        if isConfirmPassEyeClicked {
+            self.confirmPasswordTextField.isSecureTextEntry = false
+            self.eyeButtonOfConfirmPassword.setImage(UIImage.init(systemName: "eye.slash"), for: .normal)
+        }else {
+            self.confirmPasswordTextField.isSecureTextEntry = true
+            self.eyeButtonOfConfirmPassword.setImage(UIImage.init(systemName: "eye"), for: .normal)
+        }
     }
 
     @IBAction func submitButtonClicked(_ sender: Any) {

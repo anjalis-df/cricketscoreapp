@@ -16,6 +16,7 @@ class MatchDetailsViewController: UIViewController {
     @IBOutlet var btnBowling: UIButton!
     
     var winningTeamName: String?
+    var loserTeamName: String?
     var isTossButtonClicked: Bool? = false
     
     var scoreBoardVC: ScoreBoardViewController?
@@ -37,15 +38,18 @@ class MatchDetailsViewController: UIViewController {
         if result == 1 {
             winningTeamLabel.text = UserDefaults.standard.string(forKey: "TeamA")
             winningTeamName = winningTeamLabel.text!
+            loserTeamName = UserDefaults.standard.string(forKey: "TeamB")
+            
         }else {
             winningTeamLabel.text = UserDefaults.standard.string(forKey: "TeamB")
             winningTeamName = winningTeamLabel.text!
+            loserTeamName = UserDefaults.standard.string(forKey: "TeamA")
         }
         
         UserDefaults.standard.set(winningTeamName, forKey: "WinningTeam")
+        UserDefaults.standard.set(loserTeamName, forKey: "LoserTeam")
         
         self.tossButton.alpha = 0.5
-        self.tossButton.isUserInteractionEnabled = false
         print("Winning Team: \(winningTeamName!)")
         
         scoreBoardVC = self.storyboard?.instantiateViewController(withIdentifier: "ScoreBoardViewController") as! ScoreBoardViewController
@@ -57,6 +61,9 @@ class MatchDetailsViewController: UIViewController {
         if checkingaOverValidation() == false{
             return
         }
+        scoreBoardVC?.teamOfBatsman = UserDefaults.standard.string(forKey: "WinningTeam")!
+        scoreBoardVC?.teamOfBowler = UserDefaults.standard.string(forKey: "LoserTeam")!
+        
         let teamA = UserDefaults.standard.string(forKey: "TeamA")
         let teamB = UserDefaults.standard.string(forKey: "TeamB")
         var i = 0
@@ -99,6 +106,9 @@ class MatchDetailsViewController: UIViewController {
         if checkingaOverValidation() == false{
             return
         }
+        
+        scoreBoardVC?.teamOfBatsman = UserDefaults.standard.string(forKey: "LoserTeam")!
+        scoreBoardVC?.teamOfBowler = UserDefaults.standard.string(forKey: "WinningTeam")!
         
         UserDefaults.standard.set("Bowling", forKey: winningTeamName!)
         

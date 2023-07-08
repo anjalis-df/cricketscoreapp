@@ -15,6 +15,9 @@
 		2D2198A129D5CB510064845D /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2198A029D5CB510064845D /* UIViewController.swift */; };
 		2D2243BD29F8FF5900B28EA0 /* ScoreBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2243BC29F8FF5900B28EA0 /* ScoreBoardViewController.swift */; };
 		2D579B1329C8A528003EB7CD /* MemberAddedFromViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D579B1229C8A528003EB7CD /* MemberAddedFromViewController.swift */; };
+		2D7AC3E12A596C7100CFD513 /* MemberAddedForm1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7AC3E02A596C7100CFD513 /* MemberAddedForm1ViewController.swift */; };
+		2D7AC3E42A596D1B00CFD513 /* DynamicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7AC3E22A596D1B00CFD513 /* DynamicTableViewCell.swift */; };
+		2D7AC3E52A596D1B00CFD513 /* DynamicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7AC3E32A596D1B00CFD513 /* DynamicTableViewCell.xib */; };
 		2D9295E629E40EAF0031668A /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9295E529E40EAF0031668A /* MatchDetailsViewController.swift */; };
 		2DCD4AD32A090F3500884B47 /* signinResponseMondel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCD4AD22A090F3500884B47 /* signinResponseMondel.swift */; };
 		2DE3A1C529C3507900F1B1FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3A1C429C3507900F1B1FE /* AppDelegate.swift */; };
@@ -36,6 +39,9 @@
 		2D2198A029D5CB510064845D /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		2D2243BC29F8FF5900B28EA0 /* ScoreBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardViewController.swift; sourceTree = "<group>"; };
 		2D579B1229C8A528003EB7CD /* MemberAddedFromViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAddedFromViewController.swift; sourceTree = "<group>"; };
+		2D7AC3E02A596C7100CFD513 /* MemberAddedForm1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAddedForm1ViewController.swift; sourceTree = "<group>"; };
+		2D7AC3E22A596D1B00CFD513 /* DynamicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTableViewCell.swift; sourceTree = "<group>"; };
+		2D7AC3E32A596D1B00CFD513 /* DynamicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DynamicTableViewCell.xib; sourceTree = "<group>"; };
 		2D9295E529E40EAF0031668A /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
 		2DCD4AD22A090F3500884B47 /* signinResponseMondel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signinResponseMondel.swift; sourceTree = "<group>"; };
 		2DE3A1C129C3507900F1B1FE /* CrickScore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrickScore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +129,9 @@
 				2D9295E529E40EAF0031668A /* MatchDetailsViewController.swift */,
 				2D2243BC29F8FF5900B28EA0 /* ScoreBoardViewController.swift */,
 				86F869FA2A53FA5E00008973 /* RegistrationViewController.swift */,
+				2D7AC3E02A596C7100CFD513 /* MemberAddedForm1ViewController.swift */,
+				2D7AC3E22A596D1B00CFD513 /* DynamicTableViewCell.swift */,
+				2D7AC3E32A596D1B00CFD513 /* DynamicTableViewCell.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DE3A1D129C3507A00F1B1FE /* LaunchScreen.storyboard in Resources */,
+				2D7AC3E52A596D1B00CFD513 /* DynamicTableViewCell.xib in Resources */,
 				2DE3A1CE29C3507A00F1B1FE /* Assets.xcassets in Resources */,
 				2DE3A1CC29C3507900F1B1FE /* Main.storyboard in Resources */,
 			);
@@ -211,7 +221,9 @@
 				2D9295E629E40EAF0031668A /* MatchDetailsViewController.swift in Sources */,
 				2DE3A1C929C3507900F1B1FE /* LoginViewController.swift in Sources */,
 				2DE3A1C529C3507900F1B1FE /* AppDelegate.swift in Sources */,
+				2D7AC3E12A596C7100CFD513 /* MemberAddedForm1ViewController.swift in Sources */,
 				2D2243BD29F8FF5900B28EA0 /* ScoreBoardViewController.swift in Sources */,
+				2D7AC3E42A596D1B00CFD513 /* DynamicTableViewCell.swift in Sources */,
 				2DE3A1C729C3507900F1B1FE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

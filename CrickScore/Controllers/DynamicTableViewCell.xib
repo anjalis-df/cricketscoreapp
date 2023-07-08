@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="DynamicTableViewCell" selectionStyle="default" indentationWidth="10" rowHeight="150" id="KGk-i7-Jjw" customClass="DynamicTableViewCell" customModule="CrickScore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGb-pG-Kb9">
+                        <rect key="frame" x="8" y="13" width="222" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2x-tc-ovl">
+                        <rect key="frame" x="8" y="77" width="230" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XF8-aA-ZnX">
+                        <rect key="frame" x="8" y="39" width="222" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dSi-Bb-ZnR">
+                        <rect key="frame" x="8" y="103" width="222" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSd-X5-rlW">
+                        <rect key="frame" x="251" y="41" width="60" height="76"/>
+                        <color key="backgroundColor" red="0.99353402850000005" green="0.87034374479999999" blue="0.97419351340000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="76" id="fjC-lY-JgY"/>
+                            <constraint firstAttribute="width" constant="60" id="gbF-7L-F4n"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="icons8-plus-math-50"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="dSi-Bb-ZnR" secondAttribute="bottom" constant="13" id="389-aL-Joe"/>
+                    <constraint firstAttribute="trailing" secondItem="vGb-pG-Kb9" secondAttribute="trailing" constant="90" id="53I-ib-jfU"/>
+                    <constraint firstItem="XF8-aA-ZnX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="HtW-Bs-0hA"/>
+                    <constraint firstAttribute="bottom" secondItem="NSd-X5-rlW" secondAttribute="bottom" constant="33" id="Kch-pr-TP7"/>
+                    <constraint firstItem="XF8-aA-ZnX" firstAttribute="top" secondItem="vGb-pG-Kb9" secondAttribute="bottom" constant="5" id="LTH-Fk-drb"/>
+                    <constraint firstItem="vGb-pG-Kb9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="RdP-ev-TX4"/>
+                    <constraint firstAttribute="trailing" secondItem="f2x-tc-ovl" secondAttribute="trailing" constant="82" id="UeF-oc-MYH"/>
+                    <constraint firstAttribute="trailing" secondItem="NSd-X5-rlW" secondAttribute="trailing" constant="9" id="VWq-3z-NfU"/>
+                    <constraint firstItem="dSi-Bb-ZnR" firstAttribute="top" secondItem="f2x-tc-ovl" secondAttribute="bottom" constant="5" id="d1C-8e-fds"/>
+                    <constraint firstItem="f2x-tc-ovl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="gVW-MV-Xuh"/>
+                    <constraint firstItem="dSi-Bb-ZnR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="kO1-YY-H8d"/>
+                    <constraint firstItem="vGb-pG-Kb9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="mas-Fe-R3k"/>
+                    <constraint firstAttribute="trailing" secondItem="dSi-Bb-ZnR" secondAttribute="trailing" constant="90" id="n0D-gw-6Cc"/>
+                    <constraint firstAttribute="trailing" secondItem="XF8-aA-ZnX" secondAttribute="trailing" constant="90" id="w2N-MO-NIs"/>
+                    <constraint firstItem="NSd-X5-rlW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="41" id="ww6-RD-CNm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.89231520890000005" green="0.84192222360000002" blue="0.96255940200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="addButton" destination="NSd-X5-rlW" id="olW-yU-dfT"/>
+                <outlet property="mobileNumber" destination="dSi-Bb-ZnR" id="Pxx-dP-SX1"/>
+                <outlet property="playerName" destination="XF8-aA-ZnX" id="OaW-9N-Jd4"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="20.422535211267608"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icons8-plus-math-50" width="50" height="50"/>
+    </resources>
+</document>

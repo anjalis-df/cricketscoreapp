@@ -9,26 +9,23 @@ import UIKit
 
 class TeamSelectionViewController: UIViewController {
     
-    @IBOutlet var selectTeamBtn: UIButton!
+    @IBOutlet var newGame: UIButton!
     @IBOutlet var resetBtn: UIButton!
     @IBOutlet var runningMatch: UIButton!
     static var isUserLoggedOut: Bool = false
     static var isRunningMatch = false
+    static var playerCount: String = ""
     
 //    static let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     override func viewDidLoad() {
         super.viewDidLoad()
         LoginViewController.userIndex = Int(UserDefaults.standard.string(forKey: "LastLoggedIndex")!)
         print("Index: \(LoginViewController.userIndex)")
-//        if !RegistrationViewController.userDetails[LoginViewController.userIndex].haveTeam {
-//            self.runningMatch.addTarget(self, action: #selector(whenUserHaveNoAnyTeam), for: .touchUpInside)
-//            self.resetBtn.addTarget(self, action: #selector(whenUserHaveNoAnyTeam), for: .touchUpInside)
-//        }
         self.navigationItem.leftBarButtonItem = nil
         self.navigationItem.hidesBackButton = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage.init(systemName: "arrowshape.turn.up.forward"), style: .plain, target: self, action: #selector(logoutButtonPressed))
         
-        selectTeamBtn.layer.cornerRadius = 45
+        newGame.layer.cornerRadius = 45
         resetBtn.layer.cornerRadius = 45
         runningMatch.layer.cornerRadius = 45
         
@@ -47,7 +44,23 @@ class TeamSelectionViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    @IBAction func selectTeamBtnClicked(_ sender: Any) {
+    @IBAction func newGameBtnClicked(_ sender: Any) {
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "How many player will play?", message: nil, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Submit", style: .default) { (action) in
+            print("Success")
+            print("Text: \(textField.text)")
+            TeamSelectionViewController.playerCount = textField.text!
+        }
+        alert.addAction(action)
+        alert.addTextField{ (alertTextField) in
+            alertTextField.placeholder = "Enter Player Count"
+            textField = alertTextField
+            print(alertTextField.text)
+        }
+        present(alert, animated: true, completion: nil)
+        
         let teamDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamDetails") as! TeamDetailViewController
         self.navigationController?.pushViewController(teamDetailsVC, animated: true)
     }
