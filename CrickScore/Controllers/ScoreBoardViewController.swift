@@ -447,6 +447,15 @@ class ScoreBoardViewController: UIViewController {
         if wicket {
             if isMatchFinished() {
                 displayAlertMessage(messageToDisplay: "Match is completed, Wait for result")
+                let firstteam = self.teamScoreDetailArray[0].totalBall
+                let secondTeam = self.teamScoreDetailArray[1].totalBall
+                if firstteam > secondTeam {
+                    let teamName = self.teamScoreDetailArray[0].teamName
+                    displayAlertMessage(messageToDisplay: "\(teamName) won")
+                }else {
+                    let teamName = self.teamScoreDetailArray[1].teamName
+                    displayAlertMessage(messageToDisplay: "\(teamName) won")
+                }
             }else {
                 displayAlertMessage(messageToDisplay: "Out, please change batsman.")
                 if isCurrentBatsman1 {
