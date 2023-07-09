@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LQX-qy-3By">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HV0-m0-3mK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -1320,7 +1320,6 @@
                         <outlet property="maidenOver" destination="G5D-tS-TZ7" id="oDt-d0-Ivm"/>
                         <outlet property="nameOfBatsmanTeam" destination="IE6-T0-475" id="MI2-th-QLY"/>
                         <outlet property="nameOfBowlerTeam" destination="rjV-ub-810" id="0Or-dQ-Xan"/>
-                        <outlet property="noBall" destination="MQ2-vA-zyy" id="7fl-PU-smd"/>
                         <outlet property="oneOverBall" destination="Oin-lG-HVh" id="bL8-jB-HiH"/>
                         <outlet property="runOfBatsman1" destination="2ox-Vn-mKS" id="4wf-eg-gcp"/>
                         <outlet property="runOfBatsman2" destination="fQ9-vf-Ori" id="n0G-Ei-hcT"/>
@@ -1337,6 +1336,7 @@
                         <outlet property="totalRunOfTeam1" destination="vuf-3g-XbA" id="6PA-Sd-f2g"/>
                         <outlet property="totalRunOfTeam2" destination="EQo-Hf-qEy" id="j93-qc-wEb"/>
                         <outlet property="twoOverBall" destination="vmg-gr-OiL" id="a8Z-H8-bkk"/>
+                        <outlet property="wicketOverBall" destination="MQ2-vA-zyy" id="vcv-HS-ACj"/>
                         <outlet property="wideBall" destination="otr-Gb-om9" id="fpi-pu-jnR"/>
                         <outlet property="winningTeamName" destination="aAq-ic-bRv" id="CUl-dy-AYt"/>
                         <outlet property="zeroOverBall" destination="wqV-RH-jYI" id="Rte-Zn-WWk"/>
@@ -2782,40 +2782,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qjk-Ng-Bkb">
-                                <rect key="frame" x="0.0" y="75" width="414" height="821"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="LQX-qy-3By" id="JSd-Q9-gNo"/>
                                     <outlet property="delegate" destination="LQX-qy-3By" id="wXV-k0-H8B"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehh-mF-o7t">
-                                <rect key="frame" x="0.0" y="48" width="414" height="22"/>
-                                <color key="backgroundColor" red="0.36878325319999999" green="0.79442446600000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="9aG-8A-VuG"/>
-                                    <constraint firstAttribute="height" constant="22" id="Kii-gg-DV2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PAL-s6-u22"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Qjk-Ng-Bkb" firstAttribute="trailing" secondItem="PAL-s6-u22" secondAttribute="trailing" id="Ask-da-GhF"/>
                             <constraint firstItem="Qjk-Ng-Bkb" firstAttribute="leading" secondItem="PAL-s6-u22" secondAttribute="leading" id="DhP-XX-fuz"/>
-                            <constraint firstItem="ehh-mF-o7t" firstAttribute="leading" secondItem="PAL-s6-u22" secondAttribute="leading" id="GeE-ee-qrE"/>
-                            <constraint firstItem="Qjk-Ng-Bkb" firstAttribute="top" secondItem="ehh-mF-o7t" secondAttribute="bottom" constant="5" id="IEC-5i-Yyw"/>
-                            <constraint firstAttribute="bottom" secondItem="Qjk-Ng-Bkb" secondAttribute="bottom" id="M8U-oz-QGr"/>
-                            <constraint firstItem="ehh-mF-o7t" firstAttribute="top" secondItem="PAL-s6-u22" secondAttribute="top" id="cRr-rX-3lS"/>
-                            <constraint firstItem="ehh-mF-o7t" firstAttribute="trailing" secondItem="PAL-s6-u22" secondAttribute="trailing" id="zLY-Cj-X3d"/>
+                            <constraint firstItem="PAL-s6-u22" firstAttribute="bottom" secondItem="Qjk-Ng-Bkb" secondAttribute="bottom" id="M8U-oz-QGr"/>
+                            <constraint firstItem="Qjk-Ng-Bkb" firstAttribute="top" secondItem="PAL-s6-u22" secondAttribute="top" id="QMs-Lo-LwP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Qjk-Ng-Bkb" id="0kI-9T-q3U"/>
-                        <outlet property="teamNameLabel" destination="ehh-mF-o7t" id="3v2-gj-Nm8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FSh-DL-Ews" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

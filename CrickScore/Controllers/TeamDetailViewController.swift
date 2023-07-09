@@ -46,15 +46,16 @@ class TeamDetailViewController: UIViewController, UINavigationBarDelegate {
             UserDefaults.standard.set(teamName.text, forKey: "TeamB")
             UserDefaults.standard.set(teamBelognsTo.text, forKey: String(teamName.text!))
             
-            let addMemberVC = self.storyboard?.instantiateViewController(withIdentifier: "MemberAddedFrom1") as! MemberAddedFrom1ViewController
+            let addMemberVC = self.storyboard?.instantiateViewController(withIdentifier: "MemberAddedFrom1") as! MemberAddedFromViewController
             addMemberVC.isSecondTeamMember = true
             addMemberVC.teamName = self.teamName.text
+            addMemberVC.memberCount = 0
             self.navigationController?.pushViewController(addMemberVC, animated: true)
         }else {
             UserDefaults.standard.set(teamName.text, forKey: "TeamA")
             UserDefaults.standard.set(teamBelognsTo.text, forKey: String(teamName.text!))
             
-            let addMemberVC = self.storyboard?.instantiateViewController(withIdentifier: "MemberAddedFrom1") as! MemberAddedFrom1ViewController
+            let addMemberVC = self.storyboard?.instantiateViewController(withIdentifier: "MemberAddedFrom1") as! MemberAddedFromViewController
 
             addMemberVC.isSecondTeamMember = false
             addMemberVC.teamName = self.teamName.text

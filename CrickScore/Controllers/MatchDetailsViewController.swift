@@ -32,6 +32,8 @@ class MatchDetailsViewController: UIViewController {
             return
         }
         
+        UserDefaults.standard.set(totalOversTextField.text, forKey: "TotalOvers")
+        
         let result = Int.random(in: 1...2)
         print("Result: \(result)")
         self.isTossButtonClicked = true
@@ -48,6 +50,8 @@ class MatchDetailsViewController: UIViewController {
         
         UserDefaults.standard.set(winningTeamName, forKey: "WinningTeam")
         UserDefaults.standard.set(loserTeamName, forKey: "LoserTeam")
+        UserDefaults.standard.set(false, forKey: winningTeamName!)
+        UserDefaults.standard.set(false, forKey: loserTeamName!)
         
         self.tossButton.alpha = 0.5
         print("Winning Team: \(winningTeamName!)")
@@ -66,6 +70,7 @@ class MatchDetailsViewController: UIViewController {
         
         let teamA = UserDefaults.standard.string(forKey: "TeamA")
         let teamB = UserDefaults.standard.string(forKey: "TeamB")
+        
         var i = 0
         var j = 0
         

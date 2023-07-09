@@ -26,8 +26,9 @@ class LoginViewController: UIViewController {
         if  userLoggedout != nil && userLoggedout == "0" {
             print("Logged Email: \(UserDefaults.standard.string(forKey: "LastLoggedEmail"))")
             print("Logged Password: \(UserDefaults.standard.string(forKey: "LastLoggedPassword"))")
+            let index = Int(UserDefaults.standard.string(forKey: "LastLoggedIndex")!)
             
-          //  MemberAddedFromViewController.currentMatchUserDetail = RegistrationViewController.userDetails[LoginViewController.userIndex!]
+            MemberAddedFromViewController.currentMatchUserDetail = RegistrationViewController.userDetails[index!]
             print("email: \(MemberAddedFromViewController.currentMatchUserDetail?.emailId)")
             print("email: \(MemberAddedFromViewController.currentMatchUserDetail?.password)")
             
@@ -92,7 +93,7 @@ class LoginViewController: UIViewController {
                 UserDefaults.standard.set(self.emailTextField.text, forKey: "LastLoggedEmail")
                 UserDefaults.standard.set(self.passwordTextField.text, forKey: "LastLoggedPassword")
                 UserDefaults.standard.set(index, forKey: "LastLoggedIndex")
-                LoginViewController.userIndex = index
+                LoginViewController.userIndex = Int(UserDefaults.standard.string(forKey: "LastLoggedIndex")!)
                 MemberAddedFromViewController.currentMatchUserDetail = user
                 isExist = true
                 return isExist

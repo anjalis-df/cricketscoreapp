@@ -52,6 +52,8 @@ class TeamSelectionViewController: UIViewController {
             print("Success")
             print("Text: \(textField.text)")
             TeamSelectionViewController.playerCount = textField.text!
+            let teamDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamDetails") as! TeamDetailViewController
+            self.navigationController?.pushViewController(teamDetailsVC, animated: true)
         }
         alert.addAction(action)
         alert.addTextField{ (alertTextField) in
@@ -60,9 +62,6 @@ class TeamSelectionViewController: UIViewController {
             print(alertTextField.text)
         }
         present(alert, animated: true, completion: nil)
-        
-        let teamDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamDetails") as! TeamDetailViewController
-        self.navigationController?.pushViewController(teamDetailsVC, animated: true)
     }
     
     @IBAction func resetGameClicked(_ sender: Any) {
@@ -88,6 +87,7 @@ class TeamSelectionViewController: UIViewController {
                 player.wicketStatus = false
                 player.totalRunCount = 0
                 player.totalBallCount = 0
+                player.totalOverCount = 0
                 player.totalWicketCount = 0
                 player.playerMaidenOverCount = 0
                 save()

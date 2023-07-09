@@ -18,6 +18,12 @@
         <attribute name="wicketStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserRegistrationDetails" inverseName="playerDetails" inverseEntity="UserRegistrationDetails"/>
     </entity>
+    <entity name="TeamScoreDetails" representedClassName="TeamScoreDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="teamName" optional="YES" attributeType="String"/>
+        <attribute name="totalBall" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="totalOver" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="totalRun" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
     <entity name="UserRegistrationDetails" representedClassName="UserRegistrationDetails" syncable="YES" codeGenerationType="class">
         <attribute name="code" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="emailId" optional="YES" attributeType="String"/>

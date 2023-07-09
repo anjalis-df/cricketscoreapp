@@ -14,13 +14,13 @@
             filePath = "CrickScore/Controllers/TeamSelectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "resetGameClicked(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "1DB0119B-7FB6-45CE-961B-643149FD3D74 - baf58657e64d4e8a"
+                  uuid = "1DB0119B-7FB6-45CE-961B-643149FD3D74 - baf58657e64d48b5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,12 +30,12 @@
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "1216">
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "856">
                </Location>
                <Location
-                  uuid = "1DB0119B-7FB6-45CE-961B-643149FD3D74 - baf58657e64d4ea5"
+                  uuid = "1DB0119B-7FB6-45CE-961B-643149FD3D74 - baf58657e64d48b5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,192 +45,9 @@
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "612">
-               </Location>
-               <Location
-                  uuid = "1DB0119B-7FB6-45CE-961B-643149FD3D74 - baf58657e64d4fbd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.resetGameClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "1044">
-               </Location>
-               <Location
-                  uuid = "1DB0119B-7FB6-45CE-961B-643149FD3D74 - baf58657e64d4f21"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.resetGameClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "1044">
-               </Location>
-               <Location
-                  uuid = "1DB0119B-7FB6-45CE-961B-643149FD3D74 - baf58657e64d489a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.resetGameClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "79"
-                  endingLineNumber = "79"
-                  offsetFromSymbolStart = "1044">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EF72FE66-0B93-45A8-B418-AE15BC777CCE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CrickScore/Controllers/TeamSelectionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "newGameBtnClicked(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EF72FE66-0B93-45A8-B418-AE15BC777CCE - e4e297ae80e1d32d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.selectTeamBtnClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "288">
-               </Location>
-               <Location
-                  uuid = "EF72FE66-0B93-45A8-B418-AE15BC777CCE - e4e297ae80e1d30c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.selectTeamBtnClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "EF72FE66-0B93-45A8-B418-AE15BC777CCE - e4e297ae80e1d30c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.selectTeamBtnClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  uuid = "EF72FE66-0B93-45A8-B418-AE15BC777CCE - e4e297ae80e1d288"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.selectTeamBtnClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "476">
-               </Location>
-               <Location
-                  uuid = "EF72FE66-0B93-45A8-B418-AE15BC777CCE - e4e297ae80e1d288"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.selectTeamBtnClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "580">
-               </Location>
-               <Location
-                  uuid = "EF72FE66-0B93-45A8-B418-AE15BC777CCE - 4990f037a68c80e3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.newGameBtnClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "492">
-               </Location>
-               <Location
-                  uuid = "EF72FE66-0B93-45A8-B418-AE15BC777CCE - 4990f037a68c80e3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.newGameBtnClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "596">
-               </Location>
-               <Location
-                  uuid = "EF72FE66-0B93-45A8-B418-AE15BC777CCE - 4990f037a68c80e3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.newGameBtnClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "904">
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "1040">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -293,13 +110,13 @@
             filePath = "CrickScore/Controllers/TeamDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "addTeamButtonClicked(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "739161B7-B86A-43E0-824E-D77F37144153 - 143c794b90600b02"
+                  uuid = "739161B7-B86A-43E0-824E-D77F37144153 - 143c794b9060087e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -309,12 +126,12 @@
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "1764">
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "3064">
                </Location>
                <Location
-                  uuid = "739161B7-B86A-43E0-824E-D77F37144153 - 143c794b90600b02"
+                  uuid = "739161B7-B86A-43E0-824E-D77F37144153 - 143c794b9060087e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -324,39 +141,9 @@
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "1872">
-               </Location>
-               <Location
-                  uuid = "739161B7-B86A-43E0-824E-D77F37144153 - 143c794b90600859"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamDetailViewController.addTeamButtonClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamDetailViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "2508">
-               </Location>
-               <Location
-                  uuid = "739161B7-B86A-43E0-824E-D77F37144153 - 143c794b90600acc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamDetailViewController.addTeamButtonClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamDetailViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "2508">
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "2540">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -371,9 +158,9 @@
             filePath = "CrickScore/Controllers/MemberAddedFromViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "addTapped()"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "playerAdded(sender:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -554,8 +341,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "battingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -589,6 +376,21 @@
                   endingLineNumber = "56"
                   offsetFromSymbolStart = "220">
                </Location>
+               <Location
+                  uuid = "71E34DBA-0F2D-4F21-BD94-693B25E4FE35 - 8e968058dbfdb481"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MatchDetailsViewController.battingSelected(__C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MatchDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "220">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -602,8 +404,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "battingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -637,6 +439,21 @@
                   endingLineNumber = "67"
                   offsetFromSymbolStart = "1788">
                </Location>
+               <Location
+                  uuid = "16D119CF-09B3-449A-9C7B-80199C29503F - 8e968058dbfdaaf7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MatchDetailsViewController.battingSelected(__C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MatchDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "2836">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -650,8 +467,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "battingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -685,6 +502,21 @@
                   endingLineNumber = "79"
                   offsetFromSymbolStart = "3640">
                </Location>
+               <Location
+                  uuid = "D1E7893E-A1A0-4107-A89F-EA1E8AD74C5A - 8e968058dbfda87b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MatchDetailsViewController.battingSelected(__C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MatchDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "4688">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -698,8 +530,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "bowlingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -733,6 +565,21 @@
                   endingLineNumber = "98"
                   offsetFromSymbolStart = "236">
                </Location>
+               <Location
+                  uuid = "56169916-985E-4281-8587-B03F64DE4AFB - 3088e9074560d6e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MatchDetailsViewController.bowlingSelected(__C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MatchDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "236">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -746,8 +593,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "bowlingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -781,6 +628,21 @@
                   endingLineNumber = "114"
                   offsetFromSymbolStart = "2832">
                </Location>
+               <Location
+                  uuid = "0FD20DEB-9A32-4AE0-916A-F7B2920B9FE2 - 3088e9074560db56"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MatchDetailsViewController.bowlingSelected(__C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MatchDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "3880">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -794,8 +656,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "bowlingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -829,68 +691,20 @@
                   endingLineNumber = "126"
                   offsetFromSymbolStart = "4684">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "394B934D-34C4-4BBA-9C5B-C3FB2BE3857E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
                <Location
-                  uuid = "394B934D-34C4-4BBA-9C5B-C3FB2BE3857E - 955d469a3212529e"
+                  uuid = "7F15B1F8-A1A8-48C0-BE77-92C6B041C3A8 - 3088e9074560dae2"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.ScoreBoardViewController.viewDidLoad() -&gt; ()"
+                  symbolName = "CrickScore.MatchDetailsViewController.bowlingSelected(__C.UIButton) -&gt; ()"
                   moduleName = "CrickScore"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MatchDetailsViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "2500">
-               </Location>
-               <Location
-                  uuid = "394B934D-34C4-4BBA-9C5B-C3FB2BE3857E - 955d469a321252b9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.ScoreBoardViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "2696">
-               </Location>
-               <Location
-                  uuid = "394B934D-34C4-4BBA-9C5B-C3FB2BE3857E - 955d469a321252b9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.ScoreBoardViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "2712">
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "5732">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -905,8 +719,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
             landmarkName = "battingDetailSubmitted(_:)"
             landmarkType = "7">
             <Locations>
@@ -955,6 +769,21 @@
                   endingLineNumber = "207"
                   offsetFromSymbolStart = "200">
                </Location>
+               <Location
+                  uuid = "31BB291E-0A8A-4F48-8383-E30F41F3B4A8 - 2a79b02429cc2226"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.ScoreBoardViewController.battingDetailSubmitted(__C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "221"
+                  endingLineNumber = "221"
+                  offsetFromSymbolStart = "200">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -968,8 +797,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "262"
-            endingLineNumber = "262"
+            startingLineNumber = "295"
+            endingLineNumber = "295"
             landmarkName = "bowlingDetailSubmitted(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -984,8 +813,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "283"
-            endingLineNumber = "283"
+            startingLineNumber = "319"
+            endingLineNumber = "319"
             landmarkName = "scoreOverBallClicked(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1000,8 +829,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "443"
-            endingLineNumber = "443"
+            startingLineNumber = "565"
+            endingLineNumber = "565"
             landmarkName = "loadPlayer()"
             landmarkType = "7">
             <Locations>
@@ -1035,6 +864,36 @@
                   endingLineNumber = "433"
                   offsetFromSymbolStart = "568">
                </Location>
+               <Location
+                  uuid = "87F0E964-EE16-4871-92C8-DD328E8B0E04 - a73998f58217638f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.ScoreBoardViewController.loadPlayer() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "443"
+                  endingLineNumber = "443"
+                  offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  uuid = "87F0E964-EE16-4871-92C8-DD328E8B0E04 - a73998f58217638f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.ScoreBoardViewController.loadPlayer() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "443"
+                  endingLineNumber = "443"
+                  offsetFromSymbolStart = "568">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1048,8 +907,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "507"
-            endingLineNumber = "507"
+            startingLineNumber = "640"
+            endingLineNumber = "640"
             landmarkName = "setScoreBoard(isBatsman1:batsManName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1144,8 +1003,8 @@
             filePath = "CrickScore/Controllers/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "checkingUserExistance()"
             landmarkType = "7">
             <Locations>
@@ -1209,6 +1068,36 @@
                   endingLineNumber = "87"
                   offsetFromSymbolStart = "128">
                </Location>
+               <Location
+                  uuid = "2A63B6D5-341A-4FB1-8752-AEA4E208E4DC - abcd469613ce4c31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.LoginViewController.checkingUserExistance() -&gt; Swift.Bool"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "2A63B6D5-341A-4FB1-8752-AEA4E208E4DC - abcd469613ce4cd2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.LoginViewController.checkingUserExistance() -&gt; Swift.Bool"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "140">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1222,8 +1111,8 @@
             filePath = "CrickScore/Controllers/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "loadUserDetails()"
             landmarkType = "7">
             <Locations>
@@ -1287,6 +1176,21 @@
                   endingLineNumber = "106"
                   offsetFromSymbolStart = "80">
                </Location>
+               <Location
+                  uuid = "16CFBFF1-02C1-42D1-9126-DDB58FC6D18C - 58c71b2198a0883"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.LoginViewController.loadUserDetails() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "80">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1306,7 +1210,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "D1D0B3A2-A543-483D-A03E-F1C239758216 - 91d70ab96856f532"
+                  uuid = "D1D0B3A2-A543-483D-A03E-F1C239758216 - 91d70ab96856eae8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1316,72 +1220,12 @@
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "100">
-               </Location>
-               <Location
-                  uuid = "D1D0B3A2-A543-483D-A03E-F1C239758216 - 91d70ab96856f532"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.runningMatchClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "204">
-               </Location>
-               <Location
-                  uuid = "D1D0B3A2-A543-483D-A03E-F1C239758216 - 91d70ab96856f55d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.runningMatchClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "D1D0B3A2-A543-483D-A03E-F1C239758216 - 91d70ab96856f445"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.runningMatchClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "D1D0B3A2-A543-483D-A03E-F1C239758216 - 91d70ab96856f445"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.runningMatchClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
                   offsetFromSymbolStart = "476">
                </Location>
                <Location
-                  uuid = "D1D0B3A2-A543-483D-A03E-F1C239758216 - 91d70ab96856eaae"
+                  uuid = "D1D0B3A2-A543-483D-A03E-F1C239758216 - 91d70ab96856eac9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1391,8 +1235,8 @@
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
                   offsetFromSymbolStart = "476">
                </Location>
             </Locations>
@@ -1408,9 +1252,9 @@
             filePath = "CrickScore/Controllers/MemberAddedFromViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "addTapped()"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "playerAdded(sender:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1456,9 +1300,9 @@
             filePath = "CrickScore/Controllers/MemberAddedFromViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "addTapped()"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "save()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1504,9 +1348,9 @@
             filePath = "CrickScore/Controllers/MemberAddedFromViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
-            landmarkName = "loadTempData()"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1582,9 +1426,9 @@
             filePath = "CrickScore/Controllers/MemberAddedFromViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "loadTempData()"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1598,9 +1442,9 @@
             filePath = "CrickScore/Controllers/MemberAddedFromViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
-            landmarkName = "loadTempData()"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1614,8 +1458,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "411"
-            endingLineNumber = "411"
+            startingLineNumber = "533"
+            endingLineNumber = "533"
             landmarkName = "isPlayerinTeam(playerName:playerType:Batsman:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1630,8 +1474,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "419"
-            endingLineNumber = "419"
+            startingLineNumber = "541"
+            endingLineNumber = "541"
             landmarkName = "isPlayerinTeam(playerName:playerType:Batsman:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1646,8 +1490,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "498"
-            endingLineNumber = "498"
+            startingLineNumber = "620"
+            endingLineNumber = "620"
             landmarkName = "loadPlayer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1662,136 +1506,10 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "486"
-            endingLineNumber = "486"
+            startingLineNumber = "608"
+            endingLineNumber = "608"
             landmarkName = "loadPlayer()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7DDF35AE-272A-4D16-AD43-35CA357953C3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
-            landmarkName = "battingDetailSubmitted(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7DDF35AE-272A-4D16-AD43-35CA357953C3 - 2a79b02429cc2260"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.ScoreBoardViewController.battingDetailSubmitted(__C.UIButton) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "219"
-                  endingLineNumber = "219"
-                  offsetFromSymbolStart = "5304">
-               </Location>
-               <Location
-                  uuid = "7DDF35AE-272A-4D16-AD43-35CA357953C3 - 2a79b02429cc2260"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.ScoreBoardViewController.battingDetailSubmitted(__C.UIButton) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "219"
-                  endingLineNumber = "219"
-                  offsetFromSymbolStart = "3736">
-               </Location>
-               <Location
-                  uuid = "7DDF35AE-272A-4D16-AD43-35CA357953C3 - 2a79b02429cc2260"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.ScoreBoardViewController.battingDetailSubmitted(__C.UIButton) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "219"
-                  endingLineNumber = "219"
-                  offsetFromSymbolStart = "3728">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A3D7789C-AB17-48D9-852D-84B9D27D3268"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236"
-            landmarkName = "battingDetailSubmitted(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A3D7789C-AB17-48D9-852D-84B9D27D3268 - 2a79b02429cc22c7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.ScoreBoardViewController.battingDetailSubmitted(__C.UIButton) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "222"
-                  endingLineNumber = "222"
-                  offsetFromSymbolStart = "5372">
-               </Location>
-               <Location
-                  uuid = "A3D7789C-AB17-48D9-852D-84B9D27D3268 - 2a79b02429cc22c7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.ScoreBoardViewController.battingDetailSubmitted(__C.UIButton) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "222"
-                  endingLineNumber = "222"
-                  offsetFromSymbolStart = "4728">
-               </Location>
-               <Location
-                  uuid = "A3D7789C-AB17-48D9-852D-84B9D27D3268 - 2a79b02429cc2578"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.ScoreBoardViewController.battingDetailSubmitted(__C.UIButton) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "227"
-                  endingLineNumber = "227"
-                  offsetFromSymbolStart = "4716">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1804,8 +1522,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "422"
-            endingLineNumber = "422"
+            startingLineNumber = "544"
+            endingLineNumber = "544"
             landmarkName = "isPlayerinTeam(playerName:playerType:Batsman:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1820,8 +1538,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "goBackToTeamSelectionVC()"
             landmarkType = "7">
             <Locations>
@@ -1868,6 +1586,36 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "198"
                   endingLineNumber = "198"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "1A24858E-CA70-4997-A99F-3E66793C18E4 - ea893385cd31cece"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.ScoreBoardViewController.goBackToTeamSelectionVC() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "1A24858E-CA70-4997-A99F-3E66793C18E4 - ea893385cd31cece"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.ScoreBoardViewController.goBackToTeamSelectionVC() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
                   offsetFromSymbolStart = "144">
                </Location>
             </Locations>
@@ -1933,6 +1681,21 @@
                   endingLineNumber = "23"
                   offsetFromSymbolStart = "208">
                </Location>
+               <Location
+                  uuid = "BDF482A8-D837-4027-9036-1397EB39086B - 8e835dea64240614"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.LoginViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "216">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1995,6 +1758,21 @@
                   startingLineNumber = "22"
                   endingLineNumber = "22"
                   offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "4BD51BA3-28D2-41E6-B4AD-0301688DAD7F - 8e835dea64240635"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.LoginViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "160">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2059,6 +1837,21 @@
                   endingLineNumber = "39"
                   offsetFromSymbolStart = "36">
                </Location>
+               <Location
+                  uuid = "1D5366E1-106E-499D-8AE0-838A1E23EB7F - 10f3439d5d53d035"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.TeamSelectionViewController.logoutButtonPressed() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "36">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2072,8 +1865,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -2107,6 +1900,21 @@
                   endingLineNumber = "101"
                   offsetFromSymbolStart = "328">
                </Location>
+               <Location
+                  uuid = "443D6E0F-FC8E-49E7-8FBD-4ADF2D77846A - 955d469a321252ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.ScoreBoardViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/ScoreBoardViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "312">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2120,8 +1928,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
             landmarkName = "battingDetailSubmitted(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2136,8 +1944,8 @@
             filePath = "CrickScore/Controllers/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "clickedLoginButton(_:)"
             landmarkType = "7">
             <Locations>
@@ -2186,6 +1994,21 @@
                   endingLineNumber = "41"
                   offsetFromSymbolStart = "104">
                </Location>
+               <Location
+                  uuid = "F892B055-7D26-4325-9B19-B21164937EBF - 99f4ba764422897"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.LoginViewController.clickedLoginButton(Any) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "104">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2215,13 +2038,13 @@
             filePath = "CrickScore/Controllers/TeamSelectionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "resetGameClicked(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "107F0716-2140-4BEE-A8DD-7DD347A0AED1 - baf58657e64d4e29"
+                  uuid = "107F0716-2140-4BEE-A8DD-7DD347A0AED1 - baf58657e64d4f40"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2231,12 +2054,12 @@
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
                   offsetFromSymbolStart = "128">
                </Location>
                <Location
-                  uuid = "107F0716-2140-4BEE-A8DD-7DD347A0AED1 - baf58657e64d4dad"
+                  uuid = "107F0716-2140-4BEE-A8DD-7DD347A0AED1 - baf58657e64d4f21"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2246,23 +2069,8 @@
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "128">
-               </Location>
-               <Location
-                  uuid = "107F0716-2140-4BEE-A8DD-7DD347A0AED1 - baf58657e64d4f06"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.TeamSelectionViewController.resetGameClicked(Any) -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
                   offsetFromSymbolStart = "128">
                </Location>
             </Locations>
@@ -2284,7 +2092,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B349F869-190E-4BCA-AA85-6C6BC4E522C5 - 91d70ab96856f4be"
+                  uuid = "B349F869-190E-4BCA-AA85-6C6BC4E522C5 - 91d70ab96856eb4d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2294,12 +2102,12 @@
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
                   offsetFromSymbolStart = "84">
                </Location>
                <Location
-                  uuid = "B349F869-190E-4BCA-AA85-6C6BC4E522C5 - 91d70ab96856eb03"
+                  uuid = "B349F869-190E-4BCA-AA85-6C6BC4E522C5 - 91d70ab96856eb22"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2309,8 +2117,8 @@
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
                   offsetFromSymbolStart = "84">
                </Location>
             </Locations>
@@ -2326,9 +2134,9 @@
             filePath = "CrickScore/Controllers/MemberAddedFromViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
-            landmarkName = "addTapped()"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "save()"
             landmarkType = "7">
             <Locations>
                <Location
@@ -2404,9 +2212,9 @@
             filePath = "CrickScore/Controllers/MemberAddedFromViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "addTapped()"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "playerAdded(sender:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -2500,40 +2308,70 @@
             filePath = "CrickScore/Controllers/MemberAddedForm1ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "playerAdded(sender:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E7E3EC68-A0DB-4CE9-A016-3FC5C2BCC229 - 869bd70cd13f728e"
+                  uuid = "E7E3EC68-A0DB-4CE9-A016-3FC5C2BCC229 - a890915be4e77466"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.MemberAddedForm1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
                   moduleName = "CrickScore"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "1800">
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "3976">
                </Location>
                <Location
-                  uuid = "E7E3EC68-A0DB-4CE9-A016-3FC5C2BCC229 - 869bd70cd13f728e"
+                  uuid = "E7E3EC68-A0DB-4CE9-A016-3FC5C2BCC229 - a890915be4e77466"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.MemberAddedForm1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
                   moduleName = "CrickScore"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "3652">
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "4084">
+               </Location>
+               <Location
+                  uuid = "E7E3EC68-A0DB-4CE9-A016-3FC5C2BCC229 - a890915be4e77466"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "10796">
+               </Location>
+               <Location
+                  uuid = "E7E3EC68-A0DB-4CE9-A016-3FC5C2BCC229 - a890915be4e77466"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "3796">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2541,39 +2379,88 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D38C33BA-1A66-4BA4-990F-2416D9B0EFAD"
+            uuid = "6D902BF6-10A7-4401-BCA8-FF29DBC923B1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/TeamSelectionViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "newGameBtnClicked(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6D902BF6-10A7-4401-BCA8-FF29DBC923B1 - fe27f66d75e2ebc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIAlertAction) -&gt; () in CrickScore.TeamSelectionViewController.newGameBtnClicked(Any) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "6D902BF6-10A7-4401-BCA8-FF29DBC923B1 - fe27f66d75e2ebc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIAlertAction) -&gt; () in CrickScore.TeamSelectionViewController.newGameBtnClicked(Any) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/TeamSelectionViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F64A63D9-06AA-4CED-8784-F00A5D258C71"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/TeamDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82B0C8A2-329F-40F8-B7E3-000C2BCE734B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CrickScore/Controllers/MemberAddedForm1ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "playerAdded(sender:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "D38C33BA-1A66-4BA4-990F-2416D9B0EFAD - 57d8fb5a80e94193"
+                  uuid = "82B0C8A2-329F-40F8-B7E3-000C2BCE734B - dc37474b66153c5d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.MemberAddedForm1ViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "CrickScore"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "516">
-               </Location>
-               <Location
-                  uuid = "D38C33BA-1A66-4BA4-990F-2416D9B0EFAD - 869bd70cd13f7586"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CrickScore.MemberAddedForm1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.viewDidLoad() -&gt; ()"
                   moduleName = "CrickScore"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
@@ -2581,9 +2468,517 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
                   endingLineNumber = "28"
-                  offsetFromSymbolStart = "204">
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "82B0C8A2-329F-40F8-B7E3-000C2BCE734B - dc37474b66153c3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "168">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "78FA7452-BA85-4CAF-81FA-37DD47B67AFA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "playerAdded(sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "78FA7452-BA85-4CAF-81FA-37DD47B67AFA - a890915be4e74829"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "9148">
+               </Location>
+               <Location
+                  uuid = "78FA7452-BA85-4CAF-81FA-37DD47B67AFA - a890915be4e74829"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "7976">
+               </Location>
+               <Location
+                  uuid = "78FA7452-BA85-4CAF-81FA-37DD47B67AFA - a890915be4e74829"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "8160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E5EB560-98D0-49D2-A132-E4F38F4567A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "loadTempData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9E5EB560-98D0-49D2-A132-E4F38F4567A2 - 66baafbfdfdf9f52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.loadTempData() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "968">
+               </Location>
+               <Location
+                  uuid = "9E5EB560-98D0-49D2-A132-E4F38F4567A2 - 66baafbfdfdf9f52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.loadTempData() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "9E5EB560-98D0-49D2-A132-E4F38F4567A2 - 66baafbfdfdf9f52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.loadTempData() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "588">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FAE51008-B92E-475F-B930-0D1A67BC976C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "loadTempData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FAE51008-B92E-475F-B930-0D1A67BC976C - 66baafbfdfdf9e4a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.loadTempData() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "1588">
+               </Location>
+               <Location
+                  uuid = "FAE51008-B92E-475F-B930-0D1A67BC976C - 66baafbfdfdf9eab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.loadTempData() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "1004">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49C2CFBF-743F-4668-93FE-26B8DC85F7DB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "loadTempData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "570CB6B2-70BC-487A-9884-62C244F56B8D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "playerAdded(sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "570CB6B2-70BC-487A-9884-62C244F56B8D - a890915be4e77679"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  uuid = "570CB6B2-70BC-487A-9884-62C244F56B8D - a890915be4e77696"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "320">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5C0FE08-EABC-41F2-89BE-381A8C066900"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "save()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E5C0FE08-EABC-41F2-89BE-381A8C066900 - 2fae797417825670"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.save() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "E5C0FE08-EABC-41F2-89BE-381A8C066900 - 2fae797417825670"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.save() -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11525E8E-BEDC-4B8C-A1A7-1EB1056DF0D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "playerAdded(sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "11525E8E-BEDC-4B8C-A1A7-1EB1056DF0D2 - a890915be4e74921"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "7688">
+               </Location>
+               <Location
+                  uuid = "11525E8E-BEDC-4B8C-A1A7-1EB1056DF0D2 - a890915be4e74921"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "6760">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F135B35-CDF5-468A-A76B-A5F5289DE5A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "playerAdded(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80BDCDC1-424F-432C-BD9F-A4C9FFB63C2A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "playerAdded(sender:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "80BDCDC1-424F-432C-BD9F-A4C9FFB63C2A - a890915be4e74bea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "4136">
+               </Location>
+               <Location
+                  uuid = "80BDCDC1-424F-432C-BD9F-A4C9FFB63C2A - a890915be4e74bea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "4244">
+               </Location>
+               <Location
+                  uuid = "80BDCDC1-424F-432C-BD9F-A4C9FFB63C2A - a890915be4e74bea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrickScore.MemberAddedFrom1ViewController.playerAdded(sender: __C.UIButton) -&gt; ()"
+                  moduleName = "CrickScore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/support/Desktop/PracticeProject/cricketscoreapp/CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "10952">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "324C08CB-6663-4734-8147-F096F1CF1EB3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MemberAddedForm1ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "playerAdded(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A229D3A-A9C2-4365-AD0F-2658A9E55FEB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "tossAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2DA912A6-F728-4484-A9D7-EACCEAC88888"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "bowlingSelected(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB7A5DAF-5C09-420F-BCDB-23E378DEFB6E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "bowlingSelected(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49076BD1-DF1F-4534-891D-AEE45C586233"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "421"
+            endingLineNumber = "421"
+            landmarkName = "scoreOverBallClicked(sender:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

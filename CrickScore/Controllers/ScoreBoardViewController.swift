@@ -40,7 +40,7 @@ class ScoreBoardViewController: UIViewController {
     @IBOutlet var fourOverBall: UIButton!
     @IBOutlet var sixOverBall: UIButton!
     @IBOutlet var wideBall: UIButton!
-    @IBOutlet var noBall: UIButton!
+    @IBOutlet var wicketOverBall: UIButton!
     
     @IBOutlet var totalRunOfTeam1: UILabel!
     @IBOutlet var totalRunOfTeam2: UILabel!
@@ -102,6 +102,8 @@ class ScoreBoardViewController: UIViewController {
     var batsmanDetailArray = [PlayerDetails]()
     var bowlerDetailArray = [PlayerDetails]()
     
+    var teamScoreDetailArray = [TeamScoreDetails]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target:self, action: #selector(goBackToTeamSelectionVC))
@@ -118,9 +120,21 @@ class ScoreBoardViewController: UIViewController {
             self.nameOfBowlerTeam.text = UserDefaults.standard.string(forKey: "WinningTeam")
         }
         
+        if UserDefaults.standard.string(forKey: "totalWicketCount") == TeamSelectionViewController.playerCount {
+            displayAlertMessage(messageToDisplay: "Player all out")
+        }
+        
         if TeamSelectionViewController.isRunningMatch {
-            
             self.loadPlayer()
+            
+            if UserDefaults.standard.string(forKey: "totalWicketCount") == TeamSelectionViewController.playerCount {
+                if UserDefaults.standard.string(forKey: "WinningTeam") == "Batting" {
+                    displayAlertMessage(messageToDisplay: "Team \(UserDefaults.standard.string(forKey: "WinningTeam")!) all out")
+                }else {
+                    displayAlertMessage(messageToDisplay: "Team \(UserDefaults.standard.string(forKey: "LoserTeam")!) all out")
+                }
+                self.swapBothTeam()
+            }
             
             var batsman1 = ""
             var batsman2 = ""
@@ -218,6 +232,7 @@ class ScoreBoardViewController: UIViewController {
     }
     
     @IBAction func battingDetailSubmitted(_ sender: UIButton) {
+        
         if (batsman1.text?.isEmpty == true) || (batsman2.text?.isEmpty == true ){
             self.displayAlertMessage(messageToDisplay: "Please Enter Batsman name.")
             return
@@ -230,15 +245,32 @@ class ScoreBoardViewController: UIViewController {
         let bts = isPlayerinTeam(playerName: batsman1.text!, playerType: "Batsman", Batsman: 1)
         let bts1 = isPlayerinTeam(playerName: batsman2.text!, playerType: "Batsman", Batsman: 2)
         
-        if (player1WicketStatus && player2WicketStatus) || (player1WicketStatus || player2WicketStatus) {
-            displayAlertMessage(messageToDisplay: "\(batsman1.text!) is already out. Can't play again.")
-            return
-        }
-//        else if !player2WicketStatus {
-//            displayAlertMessage(messageToDisplay: "\(batsman2.text) is already out. Can't play again.")
-//        }
+        print("Player 1 out status: \(player1WicketStatus)")
+        print("Player 2 out status: \(player2WicketStatus)")
+        
+        
         
         if bts && bts1 {
+            
+            if player1WicketStatus{
+                displayAlertMessage(messageToDisplay: "\(batsman1.text!) is out. please change batsman.")
+                batsman1.borderStyle = .bezel
+                return
+            }else if player2WicketStatus {
+                displayAlertMessage(messageToDisplay: "\(batsman2.text!) is out. please change batsman.")
+                batsman2.borderStyle = .bezel
+                return
+            } else {
+                zeroOverBall.isUserInteractionEnabled = true
+                oneOverBall.isUserInteractionEnabled = true
+                twoOverBall.isUserInteractionEnabled = true
+                threeOverBall.isUserInteractionEnabled = true
+                fourOverBall.isUserInteractionEnabled = true
+                sixOverBall.isUserInteractionEnabled = true
+                wideBall.isUserInteractionEnabled = true
+                wicketOverBall.isUserInteractionEnabled = true
+            }
+            
             UserDefaults.standard.set(batsman1.text, forKey: "Batsman1")
             UserDefaults.standard.set(batsman2.text, forKey: "Batsman2")
             submitToBatsman.alpha = 0.5
@@ -247,6 +279,7 @@ class ScoreBoardViewController: UIViewController {
             print("BatsMan2 Name: \(batsman2.text!)")
             batsman1.isUserInteractionEnabled = false
             batsman2.isUserInteractionEnabled = false
+            submitToBatsman.isUserInteractionEnabled = false
             self.bowlerOverCount = 0
             return
         }else {
@@ -264,13 +297,16 @@ class ScoreBoardViewController: UIViewController {
             return
         }
         bowlerAdded = true
-        
+        if UserDefaults.standard.string(forKey: "Bowler") == bowler.text! {
+            displayAlertMessage(messageToDisplay: "Over is completed, please change bowler.")
+        }
         if isPlayerinTeam(playerName: bowler.text!, playerType: "Bowler") {
             UserDefaults.standard.set(bowler.text, forKey: "Bowler")
             submitToBowler.alpha = 0.5
          //   self.displayAlertMessage(messageToDisplay: "Bowler added successfully")
             print("Bowler Name: \(bowler.text!)")
             bowler.isUserInteractionEnabled = false
+            submitToBowler.isUserInteractionEnabled = false
             return
         } else {
             self.displayAlertMessage(messageToDisplay: "\(bowler.text!) is not in your team.")
@@ -284,6 +320,12 @@ class ScoreBoardViewController: UIViewController {
             displayAlertMessage(messageToDisplay: "First add Batsman and Bowler detail.")
             return
         }
+        if totalBallPlayByBowler > 6 {
+            displayAlertMessage(messageToDisplay: "Over is completed, Please change bowler.")
+            self.submitToBowler.isUserInteractionEnabled = true
+            self.bowler.isUserInteractionEnabled = true
+            return
+        }
         
         let currentBowler = UserDefaults.standard.string(forKey: "Bowler")
         
@@ -292,18 +334,6 @@ class ScoreBoardViewController: UIViewController {
         totalBallPlayByBowler += 1
         totalRunCount += Int(score)!
         totalBallOfTeam1.text = String(totalBallCount)
-        if totalBallCount%6 == 0 {
-            if runAccordingOver == 0 {
-                self.maidenOverCount += 1
-                self.maidenOver.text = String(maidenOverCount)
-            }
-            totalRunCount = 0
-            bowlerOverCount += 1
-            runAccordingOver = 0
-            totalOverCount += 1
-            totalOverOfTeam1.text = String(totalOverCount)
-        }
-        
         totalRunOfTeam1.text = String(totalRunCount)
         bowlerPlayedOver.text = String(bowlerOverCount)
         runAccordingOver = runAccordingOver + Int(score)!
@@ -379,9 +409,10 @@ class ScoreBoardViewController: UIViewController {
             self.totalRunCount += 1
             totalRunOfBowler += 1
             self.totalBallCount += 1
-            self.totalBallPlayByBowler += 1
         }
         if score == "W" {
+            self.totalWicketCount += 1
+            UserDefaults.standard.set(self.totalWicketCount, forKey: "totalWicketCount")
             wicket = true
         }else {
             wicket = false
@@ -401,9 +432,100 @@ class ScoreBoardViewController: UIViewController {
             setScoreBoardForBowler(bowlerName: bowler.text!)
         }
         
-        print("Current Batsman: \(currentBatsman!)")
+        if totalBallCount%6 == 0 {
+            if runAccordingOver == 0 {
+                self.maidenOverCount += 1
+                self.maidenOver.text = String(maidenOverCount)
+            }
+            totalRunCount = 0
+            bowlerOverCount += 1
+            runAccordingOver = 0
+            totalOverCount += 1
+            totalOverOfTeam1.text = String(totalOverCount)
+        }
         
+        if wicket {
+            if isMatchFinished() {
+                displayAlertMessage(messageToDisplay: "Match is completed, Wait for result")
+            }else {
+                displayAlertMessage(messageToDisplay: "Out, please change batsman.")
+                if isCurrentBatsman1 {
+                    self.batsman1.isUserInteractionEnabled = true
+                }else {
+                    self.batsman2.isUserInteractionEnabled = true
+                }
+                submitToBatsman.isUserInteractionEnabled = true
+                zeroOverBall.isUserInteractionEnabled = false
+                oneOverBall.isUserInteractionEnabled = false
+                twoOverBall.isUserInteractionEnabled = false
+                threeOverBall.isUserInteractionEnabled = false
+                fourOverBall.isUserInteractionEnabled = false
+                sixOverBall.isUserInteractionEnabled = false
+                wideBall.isUserInteractionEnabled = false
+                wicketOverBall.isUserInteractionEnabled = false
+            }
+            print("Current Batsman: \(currentBatsman!)")
+            
+        }
         
+        if UserDefaults.standard.string(forKey: "TotalOvers") == String(self.totalOverCount) {
+            displayAlertMessage(messageToDisplay: "Over is completed.")
+            if isMatchFinished() {
+                displayAlertMessage(messageToDisplay: "Match is completed, Wait for result")
+                return
+            }
+        }
+        
+    }
+    
+    func isMatchFinished() -> Bool{
+        //isWinningTeamBatting
+        let winningTeam = UserDefaults.standard.string(forKey: "WinningTeam")!
+        let loserTeam = UserDefaults.standard.string(forKey: "LoserTeam")!
+        if UserDefaults.standard.string(forKey: "totalWicketCount") == TeamSelectionViewController.playerCount {
+            let teamSelection = UserDefaults.standard.string(forKey: winningTeam)
+            print("Team Selection: \(teamSelection!)")
+            
+            if teamSelection == "Bowling" {
+                UserDefaults.standard.set(true, forKey: "\(loserTeam)CompletedBatting")
+                let team = TeamScoreDetails(context: RegistrationViewController.context)
+                team.teamName = self.batsmanDetailArray[0].teamName
+                team.totalRun = self.batsmanDetailArray[0].totalRunCount
+                team.totalBall = self.batsmanDetailArray[0].totalBallCount
+                team.totalOver = self.batsmanDetailArray[0].totalOverCount
+                
+                self.teamScoreDetailArray.append(team)
+                save()
+            }else {
+                UserDefaults.standard.set(true, forKey: "\(winningTeam)CompletedBatting")
+                let team = TeamScoreDetails(context: RegistrationViewController.context)
+                team.teamName = self.batsmanDetailArray[0].teamName
+                team.totalRun = self.batsmanDetailArray[0].totalRunCount
+                team.totalBall = self.batsmanDetailArray[0].totalBallCount
+                team.totalOver = self.batsmanDetailArray[0].totalOverCount
+                
+                self.teamScoreDetailArray.append(team)
+                save()
+            }
+        }
+        
+        if UserDefaults.standard.string(forKey: "\(loserTeam)CompletedBatting") == "true" && UserDefaults.standard.string(forKey: "\(winningTeam)CompletedBatting") == "true" {
+            return true
+        }else {
+            self.swapBothTeam()
+            return false
+        }
+    }
+    
+    func swapBothTeam() {
+        var tempPlayerArray = [PlayerDetails]()
+        tempPlayerArray = batsmanDetailArray
+        batsmanDetailArray = bowlerDetailArray
+        bowlerDetailArray = tempPlayerArray
+        print("Batsmand Array: \(batsmanDetailArray)")
+        print("Bowler Array: \(bowlerDetailArray)")
+        displayAlertMessage(messageToDisplay: "Now other team will do batting.")
+        return
     }
     
     func isPlayerinTeam(playerName: String, playerType: String, Batsman: Int = 0) -> Bool {
@@ -501,6 +623,17 @@ class ScoreBoardViewController: UIViewController {
         
     }
     
+    func loadTeam() {
+        let request: NSFetchRequest<TeamScoreDetails> = TeamScoreDetails.fetchRequest()
+        
+        do {
+            self.teamScoreDetailArray = try RegistrationViewController.context.fetch(request)
+            print("Player Array: \(self.teamScoreDetailArray)")
+        }catch {
+            print("Error fatching data from context \(error)")
+        }
+    }
+    
     
     
     func setScoreBoard(isBatsman1: Bool, batsManName: String) {
@@ -550,7 +683,6 @@ class ScoreBoardViewController: UIViewController {
     
     
     func setScoreBoardForBowler(bowlerName: String) {
-        self.totalBallPlayByBowler += 1
         
         var currentBowler: PlayerDetails?
         var index = 0
