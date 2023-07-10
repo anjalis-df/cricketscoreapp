@@ -1318,6 +1318,7 @@
                         <outlet property="fourOfBatsman2" destination="pFg-Bl-2ho" id="kqY-SW-TvU"/>
                         <outlet property="fourOverBall" destination="T9W-mJ-9Df" id="0I6-tc-9fe"/>
                         <outlet property="maidenOver" destination="G5D-tS-TZ7" id="oDt-d0-Ivm"/>
+                        <outlet property="matchTitle" destination="aAq-ic-bRv" id="Euj-mb-88h"/>
                         <outlet property="nameOfBatsmanTeam" destination="IE6-T0-475" id="MI2-th-QLY"/>
                         <outlet property="nameOfBowlerTeam" destination="rjV-ub-810" id="0Or-dQ-Xan"/>
                         <outlet property="oneOverBall" destination="Oin-lG-HVh" id="bL8-jB-HiH"/>
@@ -1338,7 +1339,6 @@
                         <outlet property="twoOverBall" destination="vmg-gr-OiL" id="a8Z-H8-bkk"/>
                         <outlet property="wicketOverBall" destination="MQ2-vA-zyy" id="vcv-HS-ACj"/>
                         <outlet property="wideBall" destination="otr-Gb-om9" id="fpi-pu-jnR"/>
-                        <outlet property="winningTeamName" destination="aAq-ic-bRv" id="CUl-dy-AYt"/>
                         <outlet property="zeroOverBall" destination="wqV-RH-jYI" id="Rte-Zn-WWk"/>
                     </connections>
                 </viewController>
@@ -1852,10 +1852,10 @@
             </objects>
             <point key="canvasLocation" x="6638" y="132"/>
         </scene>
-        <!--Member Added From View Controller-->
+        <!--Member Added From2 View Controller-->
         <scene sceneID="6oV-Pn-TVD">
             <objects>
-                <viewController restorationIdentifier="MemberAddedFrom" storyboardIdentifier="MemberAddedFrom" id="vlP-lH-1bZ" customClass="MemberAddedFromViewController" customModule="CrickScore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MemberAddedFrom2" storyboardIdentifier="MemberAddedFrom2" id="vlP-lH-1bZ" customClass="MemberAddedFrom2ViewController" customModule="CrickScore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dUh-oh-5hr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2773,10 +2773,10 @@
             </objects>
             <point key="canvasLocation" x="3570" y="118"/>
         </scene>
-        <!--Member Added From1 View Controller-->
+        <!--Member Added From View Controller-->
         <scene sceneID="1vd-e8-8QJ">
             <objects>
-                <viewController restorationIdentifier="MemberAddedFrom1" storyboardIdentifier="MemberAddedFrom1" id="LQX-qy-3By" customClass="MemberAddedFrom1ViewController" customModule="CrickScore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MemberAddedFrom" storyboardIdentifier="MemberAddedFrom" id="LQX-qy-3By" customClass="MemberAddedFromViewController" customModule="CrickScore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RtA-Y0-OfX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

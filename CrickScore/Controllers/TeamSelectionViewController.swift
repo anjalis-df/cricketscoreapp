@@ -52,6 +52,7 @@ class TeamSelectionViewController: UIViewController {
             print("Success")
             print("Text: \(textField.text)")
             TeamSelectionViewController.playerCount = textField.text!
+            UserDefaults.standard.set(textField.text, forKey: "PlayerCount")
             let teamDetailsVC = self.storyboard?.instantiateViewController(withIdentifier: "TeamDetails") as! TeamDetailViewController
             self.navigationController?.pushViewController(teamDetailsVC, animated: true)
         }

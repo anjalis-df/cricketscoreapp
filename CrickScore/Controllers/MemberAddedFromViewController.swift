@@ -83,8 +83,9 @@ class MemberAddedFromViewController: UIViewController, UITextFieldDelegate {
             playerDetail.parent = RegistrationViewController.userDetails[LoginViewController.userIndex!]
             MemberAddedFromViewController.playerDetails.append(playerDetail)
             save()
+            print("Player Detail: \(playerDetail)")
             if Int(TeamSelectionViewController.playerCount)!-1 == memberCount{
-                loadTempData()
+             //   loadTempData()
                 RegistrationViewController.userDetails[LoginViewController.userIndex!].haveTeam = true
                 RegistrationViewController.userDetails[LoginViewController.userIndex!].teamCount = RegistrationViewController.userDetails[LoginViewController.userIndex!].teamCount + 1
                 self.navigationController?.pushViewController(MatchDetailsVC, animated: true)

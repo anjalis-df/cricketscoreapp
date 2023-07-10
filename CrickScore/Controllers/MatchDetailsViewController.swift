@@ -50,10 +50,7 @@ class MatchDetailsViewController: UIViewController {
         
         UserDefaults.standard.set(winningTeamName, forKey: "WinningTeam")
         UserDefaults.standard.set(loserTeamName, forKey: "LoserTeam")
-        UserDefaults.standard.set(false, forKey: winningTeamName!)
-        UserDefaults.standard.set(false, forKey: loserTeamName!)
         
-        self.tossButton.alpha = 0.5
         print("Winning Team: \(winningTeamName!)")
         
         scoreBoardVC = self.storyboard?.instantiateViewController(withIdentifier: "ScoreBoardViewController") as! ScoreBoardViewController
