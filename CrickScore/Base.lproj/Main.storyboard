@@ -1311,13 +1311,13 @@
                         <outlet property="batsman1" destination="v3f-8U-7Kv" id="7Fv-zZ-NRO"/>
                         <outlet property="batsman2" destination="9ja-gw-7zr" id="QE6-of-b9I"/>
                         <outlet property="bowler" destination="Vei-NU-XCd" id="Ky2-hY-Ccy"/>
+                        <outlet property="bowlerMaidenOver" destination="G5D-tS-TZ7" id="9FM-fg-iOU"/>
                         <outlet property="bowlerPlayedOver" destination="jq6-mb-RjF" id="K78-XE-J6p"/>
                         <outlet property="bowlerRunCount" destination="IPQ-PF-Cvi" id="Bsp-q1-VUT"/>
                         <outlet property="bowlerWicket" destination="Rwm-bq-Bmn" id="cmO-mD-YWU"/>
                         <outlet property="fourOfBatsman1" destination="Ohc-pf-3nf" id="Iux-JT-lrf"/>
                         <outlet property="fourOfBatsman2" destination="pFg-Bl-2ho" id="kqY-SW-TvU"/>
                         <outlet property="fourOverBall" destination="T9W-mJ-9Df" id="0I6-tc-9fe"/>
-                        <outlet property="maidenOver" destination="G5D-tS-TZ7" id="oDt-d0-Ivm"/>
                         <outlet property="matchTitle" destination="aAq-ic-bRv" id="Euj-mb-88h"/>
                         <outlet property="nameOfBatsmanTeam" destination="IE6-T0-475" id="MI2-th-QLY"/>
                         <outlet property="nameOfBowlerTeam" destination="rjV-ub-810" id="0Or-dQ-Xan"/>

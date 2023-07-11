@@ -29,7 +29,7 @@ class ScoreBoardViewController: UIViewController {
     @IBOutlet var sixOfBatsman2: UILabel!
     
     @IBOutlet var bowlerPlayedOver: UILabel!
-    @IBOutlet var maidenOver: UILabel!
+    @IBOutlet var bowlerMaidenOver: UILabel!
     @IBOutlet var bowlerRunCount: UILabel!
     @IBOutlet var bowlerWicket: UILabel!
     
@@ -116,6 +116,7 @@ class ScoreBoardViewController: UIViewController {
     var isWinningTeamCompletedBatting: String? = ""
     var totalOvers: Int? = 0
     var playerCount: Int? = 0
+    var battingTurn: String? = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -232,8 +233,6 @@ class ScoreBoardViewController: UIViewController {
         if currentBowler == bowler.text! {
             displayAlertMessage(messageToDisplay: "Over is completed, please change bowler.")
         }
-        self.totalRunOfBowler = 0
-        self.bowlerWicketCount = 0
         
         if isPlayerinTeam(playerName: bowler.text!, playerType: "Bowler") {
             UserDefaults.standard.set(bowler.text, forKey: "CurrentBowler")
@@ -241,6 +240,9 @@ class ScoreBoardViewController: UIViewController {
             print("Bowler Name: \(bowler.text!)")
             bowler.isUserInteractionEnabled = false
             submitToBowler.isUserInteractionEnabled = false
+            self.totalRunOfBowler = 0
+            self.bowlerWicketCount = 0
+            self.totalBallPlayByBowler = 0
             return
         } else {
             self.displayAlertMessage(messageToDisplay: "\(bowler.text!) is not in your team.")
@@ -256,12 +258,10 @@ class ScoreBoardViewController: UIViewController {
         }
         if totalBallPlayByBowler > 6 {
             displayAlertMessage(messageToDisplay: "Over is completed, Please change bowler.")
-            self.bowlerWicketCount = 0
             self.submitToBowler.isUserInteractionEnabled = true
             self.bowler.isUserInteractionEnabled = true
             return
         }
-        
         let currentBowler = UserDefaults.standard.string(forKey: "CurrentBowler")
         
         var score = sender.currentTitle!
@@ -269,6 +269,7 @@ class ScoreBoardViewController: UIViewController {
         if score == "W" {
             self.totalWicketCount! += 1
             self.bowlerWicketCount += 1
+            bowlerWicket.text = String(self.bowlerWicketCount)
             UserDefaults.standard.set(self.totalWicketCount, forKey: "totalWicketCount")
             wicket = true
         }else {
@@ -283,8 +284,6 @@ class ScoreBoardViewController: UIViewController {
         totalBallPlayByBowler += 1
         totalRunCount += Int(score)!
         totalRunOfBowler += Int(score)!
-        totalBallOfTeam1.text = String(totalBallCount)
-        totalRunOfTeam1.text = String(totalRunCount)
         bowlerPlayedOver.text = String(bowlerOverCount)
         bowlerRunCount.text = String(totalRunOfBowler)
         runAccordingOver = runAccordingOver + Int(score)!
@@ -365,13 +364,21 @@ class ScoreBoardViewController: UIViewController {
         if totalBallCount%6 == 0 {
             if runAccordingOver == 0 {
                 self.maidenOverCount += 1
-                self.maidenOver.text = String(maidenOverCount)
+                self.bowlerMaidenOver.text = String(maidenOverCount)
+                maidenOverCount = 0
             }
             bowlerOverCount += 1
             runAccordingOver = 0
             totalOverCount += 1
+        }
+        
+        
+        if winningTeamSelection == "Batting" {
+            totalBallOfTeam1.text = String(totalBallCount)
+            totalRunOfTeam1.text = String(totalRunCount)
             totalOverOfTeam1.text = String(totalOverCount)
         }
+        
         
         UserDefaults.standard.set(currentBatsman, forKey: "CurrentBatsman")
         
@@ -518,7 +525,7 @@ class ScoreBoardViewController: UIViewController {
         
         
         self.bowlerPlayedOver.text = String(bowlerDetailArray[index].playerOverCount)
-        self.maidenOver.text = String(bowlerDetailArray[index].playerMaidenOverCount)
+        self.bowlerMaidenOver.text = String(bowlerDetailArray[index].playerMaidenOverCount)
         self.bowlerRunCount.text = String(bowlerDetailArray[index].playerRunCount)
         self.bowlerWicket.text = String(bowlerDetailArray[index].playerWicketCount)
         
@@ -532,8 +539,8 @@ class ScoreBoardViewController: UIViewController {
     
     func isMatchFinished() -> Bool{
             
-            if winningTeam == "Bowling" {
-                self.displayAlertMessage(messageToDisplay: <#T##String#>)
+            if winningTeam == battingTurn {
+                self.displayAlertMessage(messageToDisplay: "Hello..........")
                 UserDefaults.standard.set(true, forKey: "\(loserTeam)CompletedBatting")
                 let team = TeamScoreDetails(context: RegistrationViewController.context)
                 team.teamName = self.batsmanDetailArray[0].teamName
@@ -543,7 +550,9 @@ class ScoreBoardViewController: UIViewController {
                 
                 self.teamScoreDetailArray.append(team)
                 save()
-                UserDefaults.standard.set("Batting", forKey: winningTeam!)
+                UserDefaults.standard.set("Bowling", forKey: winningTeam!)
+                UserDefaults.standard.set("Batting", forKey: loserTeam!)
+                UserDefaults.standard.set(loserTeam, forKey: "BattingTurn")
             }else {
                 UserDefaults.standard.set(true, forKey: "\(winningTeam)CompletedBatting")
                 let team = TeamScoreDetails(context: RegistrationViewController.context)
@@ -554,7 +563,9 @@ class ScoreBoardViewController: UIViewController {
                 
                 self.teamScoreDetailArray.append(team)
                 save()
-                UserDefaults.standard.set("Bowling", forKey: winningTeam!)
+                UserDefaults.standard.set("Bowling", forKey: loserTeam!)
+                UserDefaults.standard.set("Batting", forKey: winningTeam!)
+                UserDefaults.standard.set(winningTeam, forKey: "BattingTurn")
             }
         
         self.isLoserTeamCompletedBatting = UserDefaults.standard.string(forKey: "\(loserTeam)CompletedBatting")
@@ -773,6 +784,7 @@ class ScoreBoardViewController: UIViewController {
         playerCount = Int(UserDefaults.standard.string(forKey: "PlayerCount") ?? "0") ?? 0
         isLoserTeamCompletedBatting = UserDefaults.standard.string(forKey: "\(loserTeam!)CompletedBatting") ?? ""
         isWinningTeamCompletedBatting = UserDefaults.standard.string(forKey: "\(winningTeam!)CompletedBatting") ?? ""
+        battingTurn = UserDefaults.standard.string(forKey: "BattingTurn") ?? ""
     }
     
 }

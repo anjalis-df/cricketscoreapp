@@ -64,6 +64,7 @@ class MatchDetailsViewController: UIViewController {
         }
         scoreBoardVC?.teamOfBatsman = UserDefaults.standard.string(forKey: "WinningTeam")!
         scoreBoardVC?.teamOfBowler = UserDefaults.standard.string(forKey: "LoserTeam")!
+        UserDefaults.standard.set(winningTeamName, forKey: "BattingTurn")
         
         let teamA = UserDefaults.standard.string(forKey: "TeamA")
         let teamB = UserDefaults.standard.string(forKey: "TeamB")

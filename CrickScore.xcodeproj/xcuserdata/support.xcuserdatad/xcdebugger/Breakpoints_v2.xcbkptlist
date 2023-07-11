@@ -402,8 +402,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "battingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -450,8 +450,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "battingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -498,8 +498,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "bowlingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -546,8 +546,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "bowlingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -594,8 +594,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "bowlingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -642,8 +642,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "bowlingDetailSubmitted(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -658,8 +658,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "253"
-            endingLineNumber = "253"
+            startingLineNumber = "255"
+            endingLineNumber = "255"
             landmarkName = "scoreOverBallClicked(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -674,8 +674,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "616"
-            endingLineNumber = "616"
+            startingLineNumber = "627"
+            endingLineNumber = "627"
             landmarkName = "loadPlayer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -690,8 +690,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "685"
-            endingLineNumber = "685"
+            startingLineNumber = "696"
+            endingLineNumber = "696"
             landmarkName = "setScoreBoard(isBatsman1:batsManName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1302,8 +1302,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "584"
-            endingLineNumber = "584"
+            startingLineNumber = "595"
+            endingLineNumber = "595"
             landmarkName = "isPlayerinTeam(playerName:playerType:Batsman:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1318,8 +1318,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "592"
-            endingLineNumber = "592"
+            startingLineNumber = "603"
+            endingLineNumber = "603"
             landmarkName = "isPlayerinTeam(playerName:playerType:Batsman:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1334,8 +1334,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "665"
-            endingLineNumber = "665"
+            startingLineNumber = "676"
+            endingLineNumber = "676"
             landmarkName = "loadPlayer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1350,8 +1350,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "653"
-            endingLineNumber = "653"
+            startingLineNumber = "664"
+            endingLineNumber = "664"
             landmarkName = "loadPlayer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1366,8 +1366,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "595"
-            endingLineNumber = "595"
+            startingLineNumber = "606"
+            endingLineNumber = "606"
             landmarkName = "isPlayerinTeam(playerName:playerType:Batsman:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1382,8 +1382,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "goBackToTeamSelectionVC()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1632,8 +1632,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1648,8 +1648,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "battingDetailSubmitted(_:)"
             landmarkType = "7">
             <Locations>
@@ -2658,8 +2658,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "bowlingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -2706,8 +2706,8 @@
             filePath = "CrickScore/Controllers/MatchDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "bowlingSelected(_:)"
             landmarkType = "7">
             <Locations>
@@ -2754,8 +2754,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "376"
-            endingLineNumber = "376"
+            startingLineNumber = "383"
+            endingLineNumber = "383"
             landmarkName = "scoreOverBallClicked(sender:)"
             landmarkType = "7">
             <Locations>
@@ -2818,8 +2818,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "battingDetailSubmitted(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2834,8 +2834,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "535"
-            endingLineNumber = "535"
+            startingLineNumber = "542"
+            endingLineNumber = "542"
             landmarkName = "isMatchFinished()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2850,8 +2850,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "572"
-            endingLineNumber = "572"
+            startingLineNumber = "583"
+            endingLineNumber = "583"
             landmarkName = "swapBothTeam()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2866,8 +2866,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "392"
-            endingLineNumber = "392"
+            startingLineNumber = "399"
+            endingLineNumber = "399"
             landmarkName = "scoreOverBallClicked(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2882,8 +2882,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "426"
-            endingLineNumber = "426"
+            startingLineNumber = "433"
+            endingLineNumber = "433"
             landmarkName = "scoreOverBallClicked(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2898,8 +2898,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "440"
-            endingLineNumber = "440"
+            startingLineNumber = "447"
+            endingLineNumber = "447"
             landmarkName = "MatchRunning()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2914,8 +2914,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "629"
-            endingLineNumber = "629"
+            startingLineNumber = "640"
+            endingLineNumber = "640"
             landmarkName = "loadPlayer()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2930,8 +2930,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "456"
-            endingLineNumber = "456"
+            startingLineNumber = "463"
+            endingLineNumber = "463"
             landmarkName = "MatchRunning()"
             landmarkType = "7">
          </BreakpointContent>
@@ -2946,8 +2946,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "732"
-            endingLineNumber = "732"
+            startingLineNumber = "743"
+            endingLineNumber = "743"
             landmarkName = "setScoreBoardForBowler(bowlerName:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2978,8 +2978,8 @@
             filePath = "CrickScore/Controllers/ScoreBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "390"
-            endingLineNumber = "390"
+            startingLineNumber = "397"
+            endingLineNumber = "397"
             landmarkName = "scoreOverBallClicked(sender:)"
             landmarkType = "7">
          </BreakpointContent>
