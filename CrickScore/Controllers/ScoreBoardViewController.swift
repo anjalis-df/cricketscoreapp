@@ -606,9 +606,6 @@ class ScoreBoardViewController: UIViewController {
             if MatchFinished() {
                 displayAlertMessage(messageToDisplay: "Match Finished")
                 return
-            }else {
-                self.swapBothTeam()
-                return
             }
         }
         
