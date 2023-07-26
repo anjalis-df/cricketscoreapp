@@ -10,6 +10,8 @@ import CoreData
 
 class ScoreBoardViewController: UIViewController {
     
+    @IBOutlet var teamAName: UILabel!
+    @IBOutlet var teamBName: UILabel!
     @IBOutlet var matchTitle: UILabel!
     
     @IBOutlet var batsman1: UITextField!
@@ -121,6 +123,7 @@ class ScoreBoardViewController: UIViewController {
     var battingTurn: String? = ""
     var isWicket: Bool = false
     var isBowlerChanged: Bool = false
+    var maximumRunOfLastPlayedTeam = 0
     
     let toolBar = UIToolbar()
     var pickerView = UIPickerView()
@@ -188,6 +191,10 @@ class ScoreBoardViewController: UIViewController {
         if TeamSelectionViewController.isRunningMatch {
             self.MatchRunning()
         }
+        
+        self.teamAName.text = teamA
+        self.teamBName.text = teamB
+        
         RegistrationViewController.userDetails[LoginViewController.userIndex].haveTeam = true
         print("Have Team: \(RegistrationViewController.userDetails[LoginViewController.userIndex].haveTeam)")
     }
@@ -354,14 +361,16 @@ class ScoreBoardViewController: UIViewController {
             currentBatsman = UserDefaults.standard.string(forKey: "CurrentBatsman")
             isCurrentBatsman1 = false
         }
+        currentBowler = UserDefaults.standard.string(forKey: "CurrentBowler")
+        
         
         if totalBallPlayByBowler > 6 {
             displayAlertMessage(messageToDisplay: "Over is completed, Please change bowler.")
             self.submitToBowler.isUserInteractionEnabled = true
             self.bowler.isUserInteractionEnabled = true
+            self.submitToBowler.alpha = 1
             return
         }
-        let currentBowler = UserDefaults.standard.string(forKey: "CurrentBowler")
         
         var score = sender.currentTitle!
         
@@ -499,6 +508,20 @@ class ScoreBoardViewController: UIViewController {
         }
         
         
+        if isLoserTeamCompletedBatting == "true" {
+            if totalRunCount == maximumRunOfLastPlayedTeam+1 {
+                displayAlertMessage(messageToDisplay: "Match Finished")
+                showTeamResultDetial()
+                return
+            }
+        }else if isWinningTeamCompletedBatting == "true" {
+            if totalRunCount == maximumRunOfLastPlayedTeam+1 {
+                displayAlertMessage(messageToDisplay: "Match Finished")
+                showTeamResultDetial()
+                return
+            }
+        }
+        
         
         if wicket{
             isWicket = true
@@ -579,7 +602,7 @@ class ScoreBoardViewController: UIViewController {
         }
         
         if totalOvers == self.totalOverCount && totalOvers != 0 {
-            displayAlertMessage(messageToDisplay: "\(totalOvers) completed. Now other team will do batting")
+          //  displayAlertMessage(messageToDisplay: "\(totalOvers) completed. Now other team will do batting")
             if MatchFinished() {
                 displayAlertMessage(messageToDisplay: "Match Finished")
                 return
@@ -592,8 +615,9 @@ class ScoreBoardViewController: UIViewController {
         if isBowlerChanged {
             displayAlertMessage(messageToDisplay: "Please Change Bowler")
             self.bowler.isUserInteractionEnabled = true
+            self.bowlerAdded = false
             self.submitToBowler.isUserInteractionEnabled = true
-            self.bowler.alpha = 1
+            self.submitToBowler.alpha = 1
             zeroOverBall.isUserInteractionEnabled = false
             oneOverBall.isUserInteractionEnabled = false
             twoOverBall.isUserInteractionEnabled = false
@@ -605,20 +629,7 @@ class ScoreBoardViewController: UIViewController {
         }
         
         print("Current Batsman: \(currentBatsman!)")
-        
-    }
-    
-    
-    let checkArray:[String] = ["A","B","C","D","E","F","G"]
-    
-    struct check {
-        var name: String
-        var isTrue: Bool
-    }
-    
-    var selectedRow = 0
-    @IBAction func popUpPicker(_ sender: Any) {
-      //  let vc = UIViewController()
+        print("Current Bowler: \(currentBowler!)")
         
     }
     
@@ -773,8 +784,10 @@ class ScoreBoardViewController: UIViewController {
         
         if winningTeam == battingTurn {
             UserDefaults.standard.set(true, forKey: "\(winningTeam!)CompletedBatting")
+            self.isWinningTeamCompletedBatting = UserDefaults.standard.string(forKey: "\(winningTeam!)CompletedBatting")
         }else {
             UserDefaults.standard.set(true, forKey: "\(loserTeam!)CompletedBatting")
+            self.isLoserTeamCompletedBatting = UserDefaults.standard.string(forKey: "\(loserTeam!)CompletedBatting")
         }
         
         
@@ -797,6 +810,9 @@ class ScoreBoardViewController: UIViewController {
                 print("Total Run: ", teamScoreDetailArray[0].totalRun)
                 print("Total Over: ", teamScoreDetailArray[0].totalOver)
                 print("Total Ball: ", teamScoreDetailArray[0].totalBall)
+                
+                self.maximumRunOfLastPlayedTeam = Int(teamScoreDetailArray[0].totalRun)
+                
                 batsman1.text = nil
                 batsman2.text = nil
                 bowler.text = nil
@@ -1168,6 +1184,18 @@ class ScoreBoardViewController: UIViewController {
         isLoserTeamCompletedBatting = UserDefaults.standard.string(forKey: "\(loserTeam!)CompletedBatting") ?? ""
         isWinningTeamCompletedBatting = UserDefaults.standard.string(forKey: "\(winningTeam!)CompletedBatting") ?? ""
         battingTurn = UserDefaults.standard.string(forKey: "BattingTurn") ?? ""
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? ResultVC else {return}
+        resultVC.team1Name.text = "Test"
+        resultVC.team1Run.text = "Test Run"
+        resultVC.team1Over.text = "Test Over"
+    }
+    
+    func showTeamResultDetial() {
+      //  self.performSegueWithIdentifier("mySegue", sender:sender)
+        self.performSegue(withIdentifier: "mySegue", sender: nil)
     }
     
 }

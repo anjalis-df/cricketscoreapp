@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D0693912A161F6500A551D7 /* BatsmanDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0693902A161F6500A551D7 /* BatsmanDetails.swift */; };
 		2D0693952A16547200A551D7 /* BowlerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0693942A16547200A551D7 /* BowlerDetails.swift */; };
+		2D11929E2A711C7400CB43BA /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D11929D2A711C7400CB43BA /* ResultVC.swift */; };
 		2D14A62A29C5A48D00CD8231 /* TeamDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D14A62929C5A48D00CD8231 /* TeamDetailViewController.swift */; };
 		2D14A62C29C5B4AB00CD8231 /* AddTeamMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D14A62B29C5B4AB00CD8231 /* AddTeamMemberViewController.swift */; };
 		2D1A9B932A3ADF82004981B1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A9B912A3ADF82004981B1 /* Model.xcdatamodeld */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		2D0693902A161F6500A551D7 /* BatsmanDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatsmanDetails.swift; sourceTree = "<group>"; };
 		2D0693942A16547200A551D7 /* BowlerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlerDetails.swift; sourceTree = "<group>"; };
+		2D11929D2A711C7400CB43BA /* ResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
 		2D14A62929C5A48D00CD8231 /* TeamDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailViewController.swift; sourceTree = "<group>"; };
 		2D14A62B29C5B4AB00CD8231 /* AddTeamMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTeamMemberViewController.swift; sourceTree = "<group>"; };
 		2D1A9B922A3ADF82004981B1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				2D7AC3E02A596C7100CFD513 /* MemberAddedFromViewController.swift */,
 				2D7AC3E22A596D1B00CFD513 /* DynamicTableViewCell.swift */,
 				2D7AC3E32A596D1B00CFD513 /* DynamicTableViewCell.xib */,
+				2D11929D2A711C7400CB43BA /* ResultVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				2D14A62A29C5A48D00CD8231 /* TeamDetailViewController.swift in Sources */,
 				2D0693912A161F6500A551D7 /* BatsmanDetails.swift in Sources */,
 				2D14A62C29C5B4AB00CD8231 /* AddTeamMemberViewController.swift in Sources */,
+				2D11929E2A711C7400CB43BA /* ResultVC.swift in Sources */,
 				2DFD682229C45690008476A2 /* TeamSelectionViewController.swift in Sources */,
 				2D2198A129D5CB510064845D /* UIViewController.swift in Sources */,
 				86F869FB2A53FA5E00008973 /* RegistrationViewController.swift in Sources */,
